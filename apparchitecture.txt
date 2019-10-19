@@ -1,0 +1,25 @@
+App Architecture
+
+- Good architecture helps improve team velocity and fragile code quality, as well as preventing rigid software
+- There are 2 fundamental causes for bad architecture: highly interdependent code and large types
+    - Highly interdependent code: code in one type reaches out to other concrete types. One part of your code depends on another
+    - Large types: Classes, structs, protocols, and enums that have long public interfaces due to many public methods or properties
+- Class implementations should not be too long. Think about it this way: if a new engineer comes in tomorrow and needs to understand what 1 viewcontroller does, what percentage of the app's codebase does the new developer need to understand?
+- The more objects that depend on the global state, the less information a developer will have when reading a single file
+- Today's world is agile and developers are constantly making changes to codebases so having an architecture that is resilient to change is very important
+- To reduce interdependency in codebases, limit object dependencies and make the required dependencies obvious
+- Making code reusable, even if you don't need to use it more than once, is good because it helps when shuffling code around and reduces the risk of refactors
+- Compile and build times are also dependent on good architecture. Since Swift doesn't use header files, every time a change is made to a file, it has to read through all the Swift files in the entire module again when compiling. By breaking up your project into different modules, unedited modules don't have to be recompiled which speeds up build times
+- Good architecture allows you to break user stories into tasks - different kinds of objects needed to build that new feature
+- Migrating code from one technology to another is much easier with good architecture since high level types won't be coupled with lower level system implementations ie migrating from NSURLConnection pre iOs7 to NSURLSession post
+- Being locked with a specific type of data format is also a problem.
+- Since many teams use data driven and lean approaches to app dev - feature flags to A/B test features and to toggle off unfinished features, good architecture makes incorporating feature flags flexible
+- UIKit is designed with MVC so starting with MVC is good. You can scale up after
+- Clean architecture and ports & adapters are concepts that are high level and abstract but will help in tweaking derived patterns. VIPER and RIBs(uber's take on VIPER) are both derived. Good for apps that have a lot of business logic, not so much presentation heavy
+- Unidirectional architecture are all about reactive UIs and state management. Redux(the most used uni pattern), MVI, Flux, RxFeedback are all examples. The one drawback is that most components are interconnected and inflexible
+- Elements is a collection of smaller architecture patterns designed to be independent so you can use multiple architecture patterns flexibly.
+- General best practices
+    - Make sure to have cohesive types - properties and methods that make up a type should have focused responsibilities
+    - Multi module apps
+    - Loosely coupled parts
+    - Managing object dependencies using patterns like dependency injection containers and service locators
