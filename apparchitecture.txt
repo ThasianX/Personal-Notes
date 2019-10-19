@@ -1,5 +1,7 @@
 App Architecture
 
+### Chapter 2: Which architecture is right for me
+
 - Good architecture helps improve team velocity and fragile code quality, as well as preventing rigid software
 - There are 2 fundamental causes for bad architecture: highly interdependent code and large types
     - Highly interdependent code: code in one type reaches out to other concrete types. One part of your code depends on another
@@ -23,3 +25,62 @@ App Architecture
     - Multi module apps
     - Loosely coupled parts
     - Managing object dependencies using patterns like dependency injection containers and service locators
+
+### Chapter 4: Objects and Their Dependencies
+
+- Good dependency techniques have these qualities
+    - Maintainability: Changing one part of the code base doesn't adversely affect others
+    - Testability: Unit and UI tests don't rely on factors you can't control such as the network
+    - Substitutability: Able to substitute the current implementation at compile time and runtime. Useful for A/B testing
+    - Deferability: Able to defer big decisions - selecting a database
+    - Parallel work streams: Different members able to work independently on the same feature without interrupting each other
+    - Control during development: Allows developers to quickly iterate by controlling build behavior - sign in would use a fake in memory credential store for testing
+    - Minimizing object lifetimes: Developers have to manage less states and makes the app more predictable
+    - Reusability: Components can be reused
+- Definitions
+    - A dependency is an object that another object depends on to work
+    - A transitive dependency is the dependency that another dependency depends on
+    - The object under construction is the object that depends on the dependency
+    - The consumer uses the object under construction
+    - These relationships form an object graph
+- How do dependencies arise?
+    - Refactoring a large class such that it becomes many smaller classes
+    - Removing duplicate code
+    - Controlling side effects
+- Fundamental considerations
+    - How will the object under construction get the dependency?
+        - From the inside: Global property or instantiation(if it has the same lifetime as the object under construction)
+        - From the outside: Initializer argument(passing the dependency as an argument), mutable stored property(setting a property in the object), method
+    - Dependency patterns
+        - Dependency injection: Provide all dependencies outside the object under construction
+        - Service locator: An object used to create and hold onto dependencies. The object would use service locator to make a dependency it needs
+        - Environment: Mutable struct that provides all dependencies needed
+        - Protocol Extension
+    - Dependency Injection
+        - Externalizes dependencies to allow control of dependencies outside of the object under construction
+        - Types of injection
+            - Initializer: Dependencies are passed as a parameter. Best injection type because the dependency can then be stored as an immutable stored property
+            - Property: After the OUC(Obj under const) is initialized, the consumer provides a dependency to the OUC by setting a stored property
+            - Method: Consumer provides dependencies to the OUC when the OUC calls a method in the consumer. Good if the OUC doesn't need to persist the dependency. Minimizes object lifetimes, which is a good dependency technique mentioned earlier
+        - Pairing dependency injection along with protocol types enables substitutability when testing fake types
+        - You can conditionally compile code through adding compilation condition identifiers to Xcode's active compilation conditions build setting
+        - Runtime substitution can be achieved through wrapping dependency initializations around an if else and setting based on the condition premise
+- Dependency injection approaches
+    - Quick overview
+        - On demand: Creating dependency graphs when needed in a decentralized manner
+        - Factories: Centralize initialization logic
+        - Single container: Batches all initialization logic into 1 container
+        - Container hierarchy: Breaks the big container into smaller containers
+    - On demand
+        - Consumer creates or finds the dependencies needed by the OUC at the time the consumer instantiates the OUC
+        - Ephemeral dependencies are created and destroyed alongside the OUC. Best used if dependencies don't need to live longer than the OUC
+        - A reference is created or found to a dependency if it needs to live longer than the OUC
+        - Pros
+            - Testable since dependencies are easily substitutable since dependencies are wrapped around if else instantiation clauses
+            - Deferability: ie start with a memory data store and when you need to switch to a database, replace all instances of in memory instantiations - albeit tedious
+            - Parallel work streams
+        - Cons
+            - Decentralized: same initialization logic is duplicated many times
+            - Consumers need to know how to build the entire dependency graph for an OUC: this could result in many dependencies being instantiated and there will probably be multiple consumers using the same OUC, which is duplicating logic
+    - Factories
+        -
