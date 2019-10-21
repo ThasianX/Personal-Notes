@@ -1,0 +1,164 @@
+## [Advanced iOS App Architecture](https://store.raywenderlich.com/products/advanced-ios-app-architecture)
+
+### Chapter 2: Which architecture is right for me
+
+- Good architecture helps improve team velocity and fragile code quality, as well as preventing rigid software
+- There are 2 fundamental causes for bad architecture: highly interdependent code and large types
+  - Highly interdependent code: code in one type reaches out to other concrete types. One part of your code depends on another
+  - Large types: Classes, structs, protocols, and enums that have long public interfaces due to many public methods or properties
+- Class implementations should not be too long. Think about it this way: if a new engineer comes in tomorrow and needs to understand what 1 view controller does, what percentage of the app's codebase does the new developer need to understand?
+- The more objects that depend on the global state, the less information a developer will have when reading a single file
+- Today's world is agile and developers are constantly making changes to codebases so having an architecture that is resilient to change is very important
+- To reduce interdependency in codebases, limit object dependencies and make the required dependencies obvious
+- Making code reusable, even if you don't need to use it more than once, is good because it helps when shuffling code around and reduces the risk of refactors
+- Compile and build times are also dependent on good architecture. Since Swift doesn't use header files, every time a change is made to a file, it has to read through all the Swift files in the entire module again when compiling. By breaking up your project into different modules, unedited modules don't have to be recompiled which speeds up build times
+- Good architecture allows you to break user stories into tasks - different kinds of objects needed to build that new feature
+- Migrating code from one technology to another is much easier with good architecture since high level types won't be coupled with lower level system implementations ie migrating from NSURLConnection pre iOs7 to NSURLSession post
+- Being locked with a specific type of data format is also a problem.
+- Since many teams use data driven and lean approaches to app dev - feature flags to A/B test features and to toggle off unfinished features, good architecture makes incorporating feature flags flexible
+- UIKit is designed with MVC so starting with MVC is good. You can scale up after
+- Clean architecture and ports & adapters are concepts that are high level and abstract but will help in tweaking derived patterns. VIPER and RIBs(uber's take on VIPER) are both derived. Good for apps that have a lot of business logic, not so much presentation heavy
+- Unidirectional architecture are all about reactive UIs and state management. Redux(the most used uni pattern), MVI, Flux, RxFeedback are all examples. The one drawback is that most components are interconnected and inflexible
+- Elements is a collection of smaller architecture patterns designed to be independent so you can use multiple architecture patterns flexibly.
+- General best practices
+  - Make sure to have cohesive types - properties and methods that make up a type should have focused responsibilities
+  - Multi module apps
+  - Loosely coupled parts
+  - Managing object dependencies using patterns like dependency injection containers and service locators
+
+### Chapter 4: Objects and Their Dependencies
+
+- Good dependency techniques have these qualities
+  - Maintainability: Changing one part of the code base doesn't adversely affect others
+  - Testability: Unit and UI tests don't rely on factors you can't control such as the network
+  - Substitutability: Able to substitute the current implementation at compile time and runtime. Useful for A/B testing
+  - Deferability: Able to defer big decisions - selecting a database
+  - Parallel work streams: Different members able to work independently on the same feature without interrupting each other
+  - Control during development: Allows developers to quickly iterate by controlling build behavior - sign in would use a fake in memory credential store for testing
+  - Minimizing object lifetimes: Developers have to manage less states and makes the app more predictable
+  - Reusability: Components can be reused
+- Definitions
+  - A dependency is an object that another object depends on to work
+  - A transitive dependency is the dependency that another dependency depends on
+  - The object under construction is the object that depends on the dependency
+  - The consumer uses the object under construction
+  - These relationships form an object graph
+- How do dependencies arise?
+  - Refactoring a large class such that it becomes many smaller classes
+  - Removing duplicate code
+  - Controlling side effects
+- Fundamental considerations
+  - How will the object under construction get the dependency?
+    - From the inside: Global property or instantiation(if it has the same lifetime as the object under construction)
+    - From the outside: Initializer argument(passing the dependency as an argument), mutable stored property(setting a property in the object), method
+  - Dependency patterns
+    - Dependency injection: Provide all dependencies outside the object under construction
+    - Service locator: An object used to create and hold onto dependencies. The object would use service locator to make a dependency it needs
+    - Environment: Mutable struct that provides all dependencies needed
+    - Protocol Extension
+  - Dependency Injection
+    - Externalizes dependencies to allow control of dependencies outside of the object under construction
+    - Types of injection
+      - Initializer: Dependencies are passed as a parameter. Best injection type because the dependency can then be stored as an immutable stored property
+      - Property: After the OUC(Obj under const) is initialized, the consumer provides a dependency to the OUC by setting a stored property
+      - Method: Consumer provides dependencies to the OUC when the OUC calls a method in the consumer. Good if the OUC doesn't need to persist the dependency. Minimizes object lifetimes, which is a good dependency technique mentioned earlier
+    - Pairing dependency injection along with protocol types enables substitutability when testing fake types
+    - You can conditionally compile code through adding compilation condition identifiers to Xcode's active compilation conditions build setting
+    - Runtime substitution can be achieved through wrapping dependency initializations around an if else and setting based on the condition premise
+- Dependency injection approaches
+  - Quick overview
+    - On demand: Creating dependency graphs when needed in a decentralized manner
+    - Factories: Centralize initialization logic
+    - Single container: Batches all initialization logic into 1 container
+    - Container hierarchy: Breaks the big container into smaller containers
+  - On demand
+    - Consumer creates or finds the dependencies needed by the OUC at the time the consumer instantiates the OUC
+    - Ephemeral dependencies are created and destroyed alongside the OUC. Best used if dependencies don't need to live longer than the OUC
+    - A reference is created or found to a dependency if it needs to live longer than the OUC
+    - Pros
+      - Testable since dependencies are easily substitutable since dependencies are wrapped around if else instantiation clauses
+      - Deferability: ie start with a memory data store and when you need to switch to a database, replace all instances of in memory instantiations - albeit tedious
+      - Parallel work streams
+    - Cons
+      - Decentralized: same initialization logic is duplicated many times
+      - Consumers need to know how to build the entire dependency graph for an OUC: this could result in many dependencies being instantiated and there will probably be multiple consumers using the same OUC, which is duplicating logic
+  - Factories
+    - Made up of factory methods that can create dependencies and OUCs
+    - No state - no stored properties
+    - Dependency factory method: create a new dependency instance
+      - For an ephemeral transitive dependency: Calls on another dependency factory included in the factories class
+      - To get a reference to a long lived transitive dependency: Include a parameter when calling the dependency
+      - Typically have a protocol return type to enable substitutability
+      - Encapsulates the mapping between protocol and concrete types through resolution
+    - OUC factory methods
+      - Creates the dependency graph needed to instantiate an OUC
+      - Called outside of the factories class
+    - Some OUCs and dependencies will need runtime factory arguments to function
+    - Substituting dependency implementations is similar but better than on demand: you wrap dependency resolutions with a conditional statement once in the factory class and you can use it anywhere
+    - The problem with factories is that every time they are called, a new instance is created
+      - This is solved in 2 ways
+        - Closures
+          - Declare a stored property in the OUC - let a: () → UseCase
+          - Add an initializer parameter to the OUC with the same closure type
+          - Go to the factories class and create a new closure in the OUC factory method that will call a dependency factory method and return the new instance
+          - Pass this as a parameter to the initializer call
+          - Benefits
+            - This is good because the OUC can create as many instances of the factory dependency as it wants without knowing all the transitive dependencies behind the dependency created
+        - Protocols
+          - Define a new factory protocol that contains a single method which returns the dependency the OUC needs
+          - Add a stored property and initializer parameter of the protocol type in the OUC
+          - Go back to the factories class and to the OUC's factory method and update the initialization line to inject self.self as the new factory protocol you declared
+    - Pros
+      - Ephemeral dependencies are created in a central place allowing you to change code in 1 place for all
+      - Substitutability since all dependencies are initialized in one class
+      - Consumers are more resilient to change since they no longer need to know how to build the dependency graphs
+    - Cons
+      - A single factory class can become extremely large in a bigger app
+      - Only works for ephemeral objects. Long lived objects need to be held somewhere else
+  - Single container approach
+    - A factories class with stored properties for holding onto long lived dependencies
+    - Dependency factory methods
+      - For creating an ephemeral transitive dependencies through calling another dependency factory - same as factories approach
+      - For reference to a long lived transitive dependency, this approach gets the dependency from a stored property
+        - This means there are no parameters for calling a method
+    - OUC factory methods
+      - Like dependency factory methods, these factory methods don't need any parameters for long lived dependencies which lessens the things consumers have to manage
+      - Also abstracts the process since consumers can create OUCs without knowing anything about dependency graphs behind the objects
+    - Long lived dependencies can be easily substituted by wrapping their initialization line with a conditional statement
+    - Containers should only have 1 instance - singleton
+    - Pros
+      - Manages the entire app's dependency graph, abstracting the need for other code to know how to build object graphs
+      - The container itself manages the singleton
+      - Code is centralized so dependency graphs are changed within the class
+    - Cons
+      - Can result in massive container class
+  - Container hierarchy approach
+    - Some issues that arise in the single container approach is that as more features are added to a product, more dependencies are added. There will be a lot of optional conditional unwrapping. Consumers could have access to reusable dependencies when a user isn't signed in
+    - Object scopes
+      - Scopes help create and destroy objects by defining a lifetime
+      - App scope
+        - Created at app launch and destroyed when app is killed
+        - Authentication stores, analytics trackers, logging systems
+      - User Scope
+        - Created when user signs in and destroyed when user signs out
+        - Remote APIs and data stores
+      - Feature scope
+        - Created when the user navigates to a certain feature and destroyed when the user navigates away
+        - Uber pick me up feature - location is fetched once and then not retrieved again
+        - Interaction scope
+          - Created when a gesture is recognized and destroyed when the gesture ends - short lived scope
+    - Every scope should have a container class
+    - Designing a container heirarchy
+      - Rule: A child container can ask for the dependencies from its parent container all the way to the root container but the parent container cannot ask for a dependency from the child container
+        - Reason: A parent container lives longer than a child container so there could be a call where the child container might not exist anymore
+      - Child containers need to be provided with parents containers with initializer injection
+      - Capturing data
+        - A container can capture data model values by converting mutable values to immutable values
+        - Makes the code more deterministic because there is no need to consider a change in the captured value. New values will just replace the captured value
+      - Pros
+        - Scoping allows dependencies that aren't singletons to exist
+        - Mutable values can be converted into immutable values
+      - Cons
+        - More complex
+        - Complex apps can end up with long container classes
+- Applying DI theory to iOS Apps

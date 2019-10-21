@@ -20,7 +20,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 
 
-# Books 
+# Books
 
 ## [Meditations](https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255/ref=pd_sbs_14_t_0/142-1864483-9272515?_encoding=UTF8&pd_rd_i=0812968255&pd_rd_r=209bfd7f-899f-403a-858c-787f21a31dc7&pd_rd_w=QouNF&pd_rd_wg=LK5Za&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=Z9ZP0D4R6HKYK6KMM8G0&psc=1&refRID=Z9ZP0D4R6HKYK6KMM8G0)
 
@@ -374,7 +374,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 ### Chapter 3: The choice
 
-- A dying father offers his 2 children a choice: they can either have 1 million dollars or 1 penny. The boy who takes the million spends it without a care in the world and ends up losing it all. The other boy who takes the penny lets it keep growing every day and one day, the boy has a million dollars and counting. 
+- A dying father offers his 2 children a choice: they can either have 1 million dollars or 1 penny. The boy who takes the million spends it without a care in the world and ends up losing it all. The other boy who takes the penny lets it keep growing every day and one day, the boy has a million dollars and counting.
   - This principle of compound interest is what Einstein calls the 8th wonder
 - The slight edge is either working for you or against you. So stop waiting and start acting.
 - It's never too late to start. It's always too late to wait.
@@ -388,7 +388,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 - Measure success in every aspect of your life: vibrant health, plenty of good friends, people who are full of energy and curiosity, always learning new things and excited about life.
 - Perseverance is a great substitute for talent.
 - It is the steady, repeated action of water that can wear even the hardest rock down to a smooth surface
-- A good rule in life: live below your means 
+- A good rule in life: live below your means
   - Parkinson's law: "Work expands to fill the time time available for its completion". Financially, this means "Whatever I have, I spend that plus a little more". This is very true since we tend to overestimate how much time we need for something, in this case, money. If we gave ourselves less time for a task and treated things as a deadline, we would be working much smarter and faster
 - Unsuccessful people choose the path of least resistance. Despite the actions needed for success being easy to do, most people won't since it's so easy to skip over them
 - The factors that create success in the long term aren't apparent in the short term. Success is the progressive realization of a worthy ideal
@@ -464,7 +464,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 - Successful people realize their own limitations are self-imposed. They realize that it isn't what happens to them that's important but how they respond to what happens that makes the difference between success and failure
 - People on the success curve focus on the future, the macro vision, compounded by micro actions
 - What's uncomfortable now becomes comfortable later
-- Self assessment: these are the areas of your life you should be striving to make better 
+- Self assessment: these are the areas of your life you should be striving to make better
   - Your health
   - Your happiness
   - Your friendships
@@ -480,12 +480,12 @@ Inspired by Gary Vaynerchuk to just create and share.
 - Having knowledge of what you want may feel uncomfortable but is essential towards winning
 - You may have been in a situation where you've told your friends about your biggest ambitions and they end up just squirming instead of feeling excited. This is because you are showing them your want(desire), which makes them aware of their want(lack)
 - Wanting is tangibly feeling your dreams tugging at your present circumstances
-- The size of the problem determines the size of the person 
+- The size of the problem determines the size of the person
   - People with huge and vivid dreams are pulled towards their dreams with such force
   - People who give up on their dreams are destined to stay mediocre
 - Successful people embrace living uncomfortably in order to attain a life that is genuinely comfortable, not deceptively comfortable, as often the life of the masses are
 - Find out what the majority are doing and do the opposite
-- For whom do millions actually remember? For whom do millions actually mourn? 
+- For whom do millions actually remember? For whom do millions actually mourn?
   - For those who will do what others are not willing to do.
   - It is for those who we erect statues.
   - Ripple effect and true mastery
