@@ -8,7 +8,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 
 
-###### Document Structure
+### Document Structure
 
 - [Books](#books)
   - [Meditations](#meditations)
@@ -22,7 +22,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 # Books 
 
-## Meditations
+## [Meditations](https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255/ref=pd_sbs_14_t_0/142-1864483-9272515?_encoding=UTF8&pd_rd_i=0812968255&pd_rd_r=209bfd7f-899f-403a-858c-787f21a31dc7&pd_rd_w=QouNF&pd_rd_wg=LK5Za&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=Z9ZP0D4R6HKYK6KMM8G0&psc=1&refRID=Z9ZP0D4R6HKYK6KMM8G0)
 
 ### Books 1-4
 
@@ -170,7 +170,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 
 
-## Deep Work
+## [Deep Work](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/B0189PVAWY/ref=sr_1_2?keywords=deep+work&qid=1571634872&s=books&sr=1-2)
 
 ### The Benefits
 
@@ -226,7 +226,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 
 
-## How To Win Friends And Influence People
+## [How To Win Friends And Influence People](https://www.amazon.com/How-Win-Friends-Influence-People/dp/B0006IU7JK/ref=sr_1_1?crid=1UC6CQ2PL70UZ&keywords=how+to+win+friends+and+influence+people&qid=1571634896&s=audible&sprefix=how+to+%2Caudible%2C147&sr=1-1)
 
 ### Part One : Fundamental Techniques in Handling People
 
@@ -355,7 +355,7 @@ Inspired by Gary Vaynerchuk to just create and share.
 
 
 
-## The Slight Edge
+## [The Slight Edge](https://www.amazon.com/Slight-Edge-Turning-Disciplines-Happiness-ebook/dp/B07G2D82DM/ref=sr_1_1?crid=36N22HON8STXS&keywords=the+slight+edge&qid=1571634992&sprefix=the+sligh%2Caps%2C228&sr=8-1)
 
 ### Chapter 1: The beach bum and the millionaire
 
