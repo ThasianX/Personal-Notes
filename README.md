@@ -2,9 +2,21 @@
 
 Below are my compiled insights and notes from books I've read, experiences I've had, and the flavors of life.
 
-[Books](#books)
 
-[Swift](#swift)
+
+Inspired by Gary Vaynerchuk to just create and share.
+
+
+
+###### Document Structure
+
+- [Books](#books)
+  - [Meditations](#meditations)
+  - [Deep Work](#deep-work)
+  - [How to Win Friends and Influence People](#how-to-win-friends-and-influence-people)
+  - [The Slight Edge](#the-slight-edge)
+- [Swift](#swift)
+  - [Advanced iOS App Architecture](#advanced-ios-app-architecture)
 
 
 
@@ -480,7 +492,7 @@ Below are my compiled insights and notes from books I've read, experiences I've 
 
 # Swift
 
-## [Advanced iOS App Architecture - RayWenderLich](https://store.raywenderlich.com/products/advanced-ios-app-architecture)
+## [Advanced iOS App Architecture](https://store.raywenderlich.com/products/advanced-ios-app-architecture)
 
 ### Chapter 2: Which architecture is right for me
 
