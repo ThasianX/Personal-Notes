@@ -132,3 +132,17 @@
   - For those who will do what others are not willing to do.
   - It is for those who we erect statues.
   - Ripple effect and true mastery
+
+### Chapter 12: Invest in yourself
+
+- The best decision you can make in life is to invest in your own continuous development and learning
+- All success is built from a foundation of study smarts plus street smarts
+    - Life Confucius said, "Knowledge without practice is useless and practice without knowledge is dangerous"
+- Life is doing. If you aren't doing, you're doing
+- The more you learn, the more insight you get about what you experienced in your activity, and you're better able to re-approach the activity with new insight
+- With the slight edge, you know that from point A to B, you'll be off track most of the time. But you know that it is the slight adjustments along the path that have the most power in your life
+- There is no one more effective at undermining your success and nobody more effective at supporting your success than yourself
+- The whole aim of self investment is not for accumulating skills but to train how you think and what you think
+- How to program your subconscious
+    - Start thinking about your intention with your conscious mind
+    - Repeat it over and over until it is handed off to the subconscious
