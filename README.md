@@ -15,5 +15,8 @@ Inspired by Gary Vaynerchuk to just create and share.
   - Deep Work
   - How to Win Friends and Influence People
   - The Slight Edge
-- Swift
-  - Advanced iOS App Architecture
+- Code
+  - Swift
+    - Advanced iOS App Architecture
+-Daygame
+  -Ping Texts
