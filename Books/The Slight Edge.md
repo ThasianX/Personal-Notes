@@ -138,7 +138,7 @@
 - The best decision you can make in life is to invest in your own continuous development and learning
 - All success is built from a foundation of study smarts plus street smarts
     - Life Confucius said, "Knowledge without practice is useless and practice without knowledge is dangerous"
-- Life is doing. If you aren't doing, you're doing
+- Life is doing. If you aren't doing, you're dying
 - The more you learn, the more insight you get about what you experienced in your activity, and you're better able to re-approach the activity with new insight
 - With the slight edge, you know that from point A to B, you'll be off track most of the time. But you know that it is the slight adjustments along the path that have the most power in your life
 - There is no one more effective at undermining your success and nobody more effective at supporting your success than yourself
@@ -146,3 +146,22 @@
 - How to program your subconscious
     - Start thinking about your intention with your conscious mind
     - Repeat it over and over until it is handed off to the subconscious
+
+### Chapter 13: Learn from mentors
+
+- Knowledge through modeling is the 3rd type of learning which will greatly help you consolidate your own insights
+- When you find a worthy mentor who believes in you and you see what you can are capable of, then you start to believe more in yourself
+- Choose your role models wisely. Are they really people who can help you and who you truly want to emulate?
+- The law of association: you and your five closest friends will tend to have similar ideas, relationships, financial statuses, attitudes, etc in life
+    - Therefore, your "associates" either take you up the success curve or drag you down the failure curve
+    - One way to gauge this is through pondering about your conversations with them
+        - Are they about responsibility, big dreams, and bold initiatives?
+        - Are they future focused and dream building?
+    - There are definitely people you are only spending a few minutes with every day with who you should be spending much more time with and vice versa
+    - You should disassociate yourself with people who don't empower you
+        - Casual friendships deserve casual time
+        - This requires compassionate awareness
+    - Form a mastermind
+        - In "Think and grow rich", Napoleon Hill talks about the mastermind, a group of people with like minds and different talents all with the purpose of serving the goals of every member of the group.
+
+> Using those three dimensions of learning—study, do, model—with slight edge persistence, in time your level of mastery rises to the point where you turn around and realize others are modeling you. You have yourself become worthy of emulating, of serving as a guide and hero to others. The cream has become butter; the hyacinth of knowledge has covered the pond of your effort. You have grown into leadership—and now you're the mentor.
