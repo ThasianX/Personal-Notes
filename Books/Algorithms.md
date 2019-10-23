@@ -1,0 +1,90 @@
+# Algorithms 4th Edition
+
+### 1.4: Analysis of Algorithms
+
+- The scientific method
+    - *Observe* some feature of the natural world
+        - There is a problem size that characterizes the difficulty of the computational task
+        - Running time is relatively insensitive to the input itself
+    - *Hypothesize* a model that is consistent with observations
+        - Fitting the obtained equation to a plot
+    - *Predict* events using the hypothesis
+        - Using the plot to predict the run times of the application
+    - *Verify* the predictions by making further observations
+        - Use other methods to check for the run time like statistical analysis
+    - *Validate* by repeating until the hypothesis and observations agree
+        - Run your application and see if the times match up
+- Mathematical models
+    - Factors that influence the total running time of the program
+        - The cost of executing each statement
+        - The frequency of execution of each statement
+    - Use Tilde notation (~) to ignore insignificant terms and simplify mathematical models
+        - n^3/6 -n^2/2 + n/3 becomes n^3/6
+    - Approximate running time
+        - The inner loop of the program is usually what plays the biggest role in the run time of the application
+        - Therefore, the running times of many programs depend only on a small subset of their instructions
+    - Analysis of algorithms
+        - Order of growth separates the program from the algorithm it implements
+    - Cost model
+        - Defines the basic operations used by the algorithm
+        - Can be composed of a proposition and proof
+    - Summary
+        - Develop an input model, including a definition of the problem size
+        - Identify the inner loop
+        - Define a cost model that includes operations in the inner loop
+        - Determine the frequency of execution of those operations for the given input
+- Order of growth classifications
+    - Constant (1)
+        - Statement - Add 2 numbers
+    - Logarithmic (log n)
+        - Divide in half - Binary search
+    - Linear (n)
+        - Loop - find a number in array
+    - Linearithmic ( n log n)
+        - Divide and conquer - merge sort
+    - Quadratic (n^2)
+        - Double nested loop - Check all pairs
+    - Cubic (n^3)
+        - Tripled nested loop - Check all triples
+    - Exponential (2^n)
+        - Exhaustive search - Check all subsets
+- Designing faster algorithms
+    - Example
+        - Finding the sum of 2 numbers in an array can be improved by sorting first and running binary search for each index
+        - Run time of n log n
+- Caveats
+    - Large constants
+        - Sometimes, leading term approximations may discount large constants that would make a difference
+    - Non-dominant inner loop
+        - The cost model might miss the true inner loop or the problem size might not be sufficiently large enough to justify ignoring lower order terms
+    - Instruction time
+        - Some instructions may take much longer than others since modern computers now use caching to organize memory
+    - System considerations
+        - In principle, it shouldn't matter but it can sometimes
+    - Too close to call
+    - Strong dependence on inputs
+        - If your algorithm returns a boolean and has the test class do all the hard work
+    - Multiple problem parameters
+- Memory
+    - How to determine the memory usage of an object
+        - Add overhead, the reference to the object's class, garbage collection info, and synchronization info, typically 16 bytes
+        - Memory usage padded to be a multiple of 8 bytes
+    - Integer object
+        - 24 bytes
+            - 16 bytes of overhead
+            - 4 bytes of padding
+            - 4 bytes for its int instance variable
+    - Linked list
+        - Nested non static inner class requires an extra 8 bytes of overhead
+        - Node object
+            - 40 bytes
+                - 16 bytes of overhead
+                - 8 bytes each for the references to Item and Node objects
+                - 8 bytes for extra overhead
+    - Takeaways
+        - When the program calls a method, the system allocates memory needed for the method from a special area of memory called the stack
+        - When an object is created with new, the system allocates the memory needed for the object in another special area of memory known as the heap
+        - Garbage collection reclaims its memory for the heap by collecting objects with no references
+- Perspective
+    - Good performance is important but writing clean and correct code is even more so
+    - Don't ignore performance characteristics. If there's a more efficient algorithm, implement it even if it means learning many difficult lines of code
