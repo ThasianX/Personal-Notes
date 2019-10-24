@@ -4,8 +4,8 @@
 
 - Good architecture helps improve team velocity and fragile code quality, as well as preventing rigid software
 - There are 2 fundamental causes for bad architecture: highly interdependent code and large types
-  - Highly interdependent code: code in one type reaches out to other concrete types. One part of your code depends on another
-  - Large types: Classes, structs, protocols, and enums that have long public interfaces due to many public methods or properties
+    - Highly interdependent code: code in one type reaches out to other concrete types. One part of your code depends on another
+    - Large types: Classes, structs, protocols, and enums that have long public interfaces due to many public methods or properties
 - Class implementations should not be too long. Think about it this way: if a new engineer comes in tomorrow and needs to understand what 1 view controller does, what percentage of the app's codebase does the new developer need to understand?
 - The more objects that depend on the global state, the less information a developer will have when reading a single file
 - Today's world is agile and developers are constantly making changes to codebases so having an architecture that is resilient to change is very important
@@ -21,144 +21,304 @@
 - Unidirectional architecture are all about reactive UIs and state management. Redux(the most used uni pattern), MVI, Flux, RxFeedback are all examples. The one drawback is that most components are interconnected and inflexible
 - Elements is a collection of smaller architecture patterns designed to be independent so you can use multiple architecture patterns flexibly.
 - General best practices
-  - Make sure to have cohesive types - properties and methods that make up a type should have focused responsibilities
-  - Multi module apps
-  - Loosely coupled parts
-  - Managing object dependencies using patterns like dependency injection containers and service locators
+    - Make sure to have cohesive types - properties and methods that make up a type should have focused responsibilities
+    - Multi module apps
+    - Loosely coupled parts
+    - Managing object dependencies using patterns like dependency injection containers and service locators
 
 ### Chapter 4: Objects and Their Dependencies
 
 - Good dependency techniques have these qualities
-  - Maintainability: Changing one part of the code base doesn't adversely affect others
-  - Testability: Unit and UI tests don't rely on factors you can't control such as the network
-  - Substitutability: Able to substitute the current implementation at compile time and runtime. Useful for A/B testing
-  - Deferability: Able to defer big decisions - selecting a database
-  - Parallel work streams: Different members able to work independently on the same feature without interrupting each other
-  - Control during development: Allows developers to quickly iterate by controlling build behavior - sign in would use a fake in memory credential store for testing
-  - Minimizing object lifetimes: Developers have to manage less states and makes the app more predictable
-  - Reusability: Components can be reused
+    - Maintainability: Changing one part of the code base doesn't adversely affect others
+    - Testability: Unit and UI tests don't rely on factors you can't control such as the network
+    - Substitutability: Able to substitute the current implementation at compile time and runtime. Useful for A/B testing
+    - Deferability: Able to defer big decisions - selecting a database
+    - Parallel work streams: Different members able to work independently on the same feature without interrupting each other
+    - Control during development: Allows developers to quickly iterate by controlling build behavior - sign in would use a fake in memory credential store for testing
+    - Minimizing object lifetimes: Developers have to manage less states and makes the app more predictable
+    - Reusability: Components can be reused
 - Definitions
-  - A dependency is an object that another object depends on to work
-  - A transitive dependency is the dependency that another dependency depends on
-  - The object under construction is the object that depends on the dependency
-  - The consumer uses the object under construction
-  - These relationships form an object graph
+    - A dependency is an object that another object depends on to work
+    - A transitive dependency is the dependency that another dependency depends on
+    - The object under construction is the object that depends on the dependency
+    - The consumer uses the object under construction
+    - These relationships form an object graph
 - How do dependencies arise?
-  - Refactoring a large class such that it becomes many smaller classes
-  - Removing duplicate code
-  - Controlling side effects
+    - Refactoring a large class such that it becomes many smaller classes
+    - Removing duplicate code
+    - Controlling side effects
 - Fundamental considerations
-  - How will the object under construction get the dependency?
-    - From the inside: Global property or instantiation(if it has the same lifetime as the object under construction)
-    - From the outside: Initializer argument(passing the dependency as an argument), mutable stored property(setting a property in the object), method
-  - Dependency patterns
-    - Dependency injection: Provide all dependencies outside the object under construction
-    - Service locator: An object used to create and hold onto dependencies. The object would use service locator to make a dependency it needs
-    - Environment: Mutable struct that provides all dependencies needed
-    - Protocol Extension
-  - Dependency Injection
-    - Externalizes dependencies to allow control of dependencies outside of the object under construction
-    - Types of injection
-      - Initializer: Dependencies are passed as a parameter. Best injection type because the dependency can then be stored as an immutable stored property
-      - Property: After the OUC(Obj under const) is initialized, the consumer provides a dependency to the OUC by setting a stored property
-      - Method: Consumer provides dependencies to the OUC when the OUC calls a method in the consumer. Good if the OUC doesn't need to persist the dependency. Minimizes object lifetimes, which is a good dependency technique mentioned earlier
-    - Pairing dependency injection along with protocol types enables substitutability when testing fake types
-    - You can conditionally compile code through adding compilation condition identifiers to Xcode's active compilation conditions build setting
-    - Runtime substitution can be achieved through wrapping dependency initializations around an if else and setting based on the condition premise
+    - How will the object under construction get the dependency?
+        - From the inside: Global property or instantiation(if it has the same lifetime as the object under construction)
+        - From the outside: Initializer argument(passing the dependency as an argument), mutable stored property(setting a property in the object), method
+    - Dependency patterns
+        - Dependency injection: Provide all dependencies outside the object under construction
+        - Service locator: An object used to create and hold onto dependencies. The object would use service locator to make a dependency it needs
+        - Environment: Mutable struct that provides all dependencies needed
+        - Protocol Extension
+    - Dependency Injection
+        - Externalizes dependencies to allow control of dependencies outside of the object under construction
+        - Types of injection
+            - Initializer: Dependencies are passed as a parameter. Best injection type because the dependency can then be stored as an immutable stored property
+            - Property: After the OUC(Obj under const) is initialized, the consumer provides a dependency to the OUC by setting a stored property
+            - Method: Consumer provides dependencies to the OUC when the OUC calls a method in the consumer. Good if the OUC doesn't need to persist the dependency. Minimizes object lifetimes, which is a good dependency technique mentioned earlier
+        - Pairing dependency injection along with protocol types enables substitutability when testing fake types
+        - You can conditionally compile code through adding compilation condition identifiers to Xcode's active compilation conditions build setting
+        - Runtime substitution can be achieved through wrapping dependency initializations around an if else and setting based on the condition premise
 - Dependency injection approaches
-  - Quick overview
-    - On demand: Creating dependency graphs when needed in a decentralized manner
-    - Factories: Centralize initialization logic
-    - Single container: Batches all initialization logic into 1 container
-    - Container hierarchy: Breaks the big container into smaller containers
-  - On demand
-    - Consumer creates or finds the dependencies needed by the OUC at the time the consumer instantiates the OUC
-    - Ephemeral dependencies are created and destroyed alongside the OUC. Best used if dependencies don't need to live longer than the OUC
-    - A reference is created or found to a dependency if it needs to live longer than the OUC
-    - Pros
-      - Testable since dependencies are easily substitutable since dependencies are wrapped around if else instantiation clauses
-      - Deferability: ie start with a memory data store and when you need to switch to a database, replace all instances of in memory instantiations - albeit tedious
-      - Parallel work streams
-    - Cons
-      - Decentralized: same initialization logic is duplicated many times
-      - Consumers need to know how to build the entire dependency graph for an OUC: this could result in many dependencies being instantiated and there will probably be multiple consumers using the same OUC, which is duplicating logic
-  - Factories
-    - Made up of factory methods that can create dependencies and OUCs
-    - No state - no stored properties
-    - Dependency factory method: create a new dependency instance
-      - For an ephemeral transitive dependency: Calls on another dependency factory included in the factories class
-      - To get a reference to a long lived transitive dependency: Include a parameter when calling the dependency
-      - Typically have a protocol return type to enable substitutability
-      - Encapsulates the mapping between protocol and concrete types through resolution
-    - OUC factory methods
-      - Creates the dependency graph needed to instantiate an OUC
-      - Called outside of the factories class
-    - Some OUCs and dependencies will need runtime factory arguments to function
-    - Substituting dependency implementations is similar but better than on demand: you wrap dependency resolutions with a conditional statement once in the factory class and you can use it anywhere
-    - The problem with factories is that every time they are called, a new instance is created
-      - This is solved in 2 ways
-        - Closures
-          - Declare a stored property in the OUC - let a: () → UseCase
-          - Add an initializer parameter to the OUC with the same closure type
-          - Go to the factories class and create a new closure in the OUC factory method that will call a dependency factory method and return the new instance
-          - Pass this as a parameter to the initializer call
-          - Benefits
-            - This is good because the OUC can create as many instances of the factory dependency as it wants without knowing all the transitive dependencies behind the dependency created
-        - Protocols
-          - Define a new factory protocol that contains a single method which returns the dependency the OUC needs
-          - Add a stored property and initializer parameter of the protocol type in the OUC
-          - Go back to the factories class and to the OUC's factory method and update the initialization line to inject self.self as the new factory protocol you declared
-    - Pros
-      - Ephemeral dependencies are created in a central place allowing you to change code in 1 place for all
-      - Substitutability since all dependencies are initialized in one class
-      - Consumers are more resilient to change since they no longer need to know how to build the dependency graphs
-    - Cons
-      - A single factory class can become extremely large in a bigger app
-      - Only works for ephemeral objects. Long lived objects need to be held somewhere else
-  - Single container approach
-    - A factories class with stored properties for holding onto long lived dependencies
-    - Dependency factory methods
-      - For creating an ephemeral transitive dependencies through calling another dependency factory - same as factories approach
-      - For reference to a long lived transitive dependency, this approach gets the dependency from a stored property
-        - This means there are no parameters for calling a method
-    - OUC factory methods
-      - Like dependency factory methods, these factory methods don't need any parameters for long lived dependencies which lessens the things consumers have to manage
-      - Also abstracts the process since consumers can create OUCs without knowing anything about dependency graphs behind the objects
-    - Long lived dependencies can be easily substituted by wrapping their initialization line with a conditional statement
-    - Containers should only have 1 instance - singleton
-    - Pros
-      - Manages the entire app's dependency graph, abstracting the need for other code to know how to build object graphs
-      - The container itself manages the singleton
-      - Code is centralized so dependency graphs are changed within the class
-    - Cons
-      - Can result in massive container class
-  - Container hierarchy approach
-    - Some issues that arise in the single container approach is that as more features are added to a product, more dependencies are added. There will be a lot of optional conditional unwrapping. Consumers could have access to reusable dependencies when a user isn't signed in
-    - Object scopes
-      - Scopes help create and destroy objects by defining a lifetime
-      - App scope
-        - Created at app launch and destroyed when app is killed
-        - Authentication stores, analytics trackers, logging systems
-      - User Scope
-        - Created when user signs in and destroyed when user signs out
-        - Remote APIs and data stores
-      - Feature scope
-        - Created when the user navigates to a certain feature and destroyed when the user navigates away
-        - Uber pick me up feature - location is fetched once and then not retrieved again
-        - Interaction scope
-          - Created when a gesture is recognized and destroyed when the gesture ends - short lived scope
-    - Every scope should have a container class
-    - Designing a container heirarchy
-      - Rule: A child container can ask for the dependencies from its parent container all the way to the root container but the parent container cannot ask for a dependency from the child container
-        - Reason: A parent container lives longer than a child container so there could be a call where the child container might not exist anymore
-      - Child containers need to be provided with parents containers with initializer injection
-      - Capturing data
-        - A container can capture data model values by converting mutable values to immutable values
-        - Makes the code more deterministic because there is no need to consider a change in the captured value. New values will just replace the captured value
-      - Pros
-        - Scoping allows dependencies that aren't singletons to exist
-        - Mutable values can be converted into immutable values
-      - Cons
-        - More complex
-        - Complex apps can end up with long container classes
+    - Quick overview
+        - On demand: Creating dependency graphs when needed in a decentralized manner
+        - Factories: Centralize initialization logic
+        - Single container: Batches all initialization logic into 1 container
+        - Container hierarchy: Breaks the big container into smaller containers
+    - On demand
+        - Consumer creates or finds the dependencies needed by the OUC at the time the consumer instantiates the OUC
+        - Ephemeral dependencies are created and destroyed alongside the OUC. Best used if dependencies don't need to live longer than the OUC
+        - A reference is created or found to a dependency if it needs to live longer than the OUC
+        - Pros
+            - Testable since dependencies are easily substitutable since dependencies are wrapped around if else instantiation clauses
+            - Deferability: ie start with a memory data store and when you need to switch to a database, replace all instances of in memory instantiations - albeit tedious
+            - Parallel work streams
+        - Cons
+            - Decentralized: same initialization logic is duplicated many times
+            - Consumers need to know how to build the entire dependency graph for an OUC: this could result in many dependencies being instantiated and there will probably be multiple consumers using the same OUC, which is duplicating logic
+    - Factories
+        - Made up of factory methods that can create dependencies and OUCs
+        - No state - no stored properties
+        - Dependency factory method: create a new dependency instance
+            - For an ephemeral transitive dependency: Calls on another dependency factory included in the factories class
+            - To get a reference to a long lived transitive dependency: Include a parameter when calling the dependency
+            - Typically have a protocol return type to enable substitutability
+            - Encapsulates the mapping between protocol and concrete types through resolution
+        - OUC factory methods
+            - Creates the dependency graph needed to instantiate an OUC
+            - Called outside of the factories class
+        - Some OUCs and dependencies will need runtime factory arguments to function
+        - Substituting dependency implementations is similar but better than on demand: you wrap dependency resolutions with a conditional statement once in the factory class and you can use it anywhere
+        - The problem with factories is that every time they are called, a new instance is created
+            - This is solved in 2 ways
+                - Closures
+                    - Declare a stored property in the OUC - let a: () → UseCase
+                    - Add an initializer parameter to the OUC with the same closure type
+                    - Go to the factories class and create a new closure in the OUC factory method that will call a dependency factory method and return the new instance
+                    - Pass this as a parameter to the initializer call
+                    - Benefits
+                        - This is good because the OUC can create as many instances of the factory dependency as it wants without knowing all the transitive dependencies behind the dependency created
+                - Protocols
+                    - Define a new factory protocol that contains a single method which returns the dependency the OUC needs
+                    - Add a stored property and initializer parameter of the protocol type in the OUC
+                    - Go back to the factories class and to the OUC's factory method and update the initialization line to inject self.self as the new factory protocol you declared
+        - Pros
+            - Ephemeral dependencies are created in a central place allowing you to change code in 1 place for all
+            - Substitutability since all dependencies are initialized in one class
+            - Consumers are more resilient to change since they no longer need to know how to build the dependency graphs
+        - Cons
+            - A single factory class can become extremely large in a bigger app
+            - Only works for ephemeral objects. Long lived objects need to be held somewhere else
+    - Single container approach
+        - A factories class with stored properties for holding onto long lived dependencies
+        - Dependency factory methods
+            - For creating an ephemeral transitive dependencies through calling another dependency factory - same as factories approach
+            - For reference to a long lived transitive dependency, this approach gets the dependency from a stored property
+                - This means there are no parameters for calling a method
+        - OUC factory methods
+            - Like dependency factory methods, these factory methods don't need any parameters for long lived dependencies which lessens the things consumers have to manage
+            - Also abstracts the process since consumers can create OUCs without knowing anything about dependency graphs behind the objects
+        - Long lived dependencies can be easily substituted by wrapping their initialization line with a conditional statement
+        - Containers should only have 1 instance - singleton
+        - Pros
+            - Manages the entire app's dependency graph, abstracting the need for other code to know how to build object graphs
+            - The container itself manages the singleton
+            - Code is centralized so dependency graphs are changed within the class
+        - Cons
+            - Can result in massive container class
+    - Container hierarchy approach
+        - Some issues that arise in the single container approach is that as more features are added to a product, more dependencies are added. There will be a lot of optional conditional unwrapping. Consumers could have access to reusable dependencies when a user isn't signed in
+        - Object scopes
+            - Scopes help create and destroy objects by defining a lifetime
+            - App scope
+                - Created at app launch and destroyed when app is killed
+                - Authentication stores, analytics trackers, logging systems
+            - User Scope
+                - Created when user signs in and destroyed when user signs out
+                - Remote APIs and data stores
+            - Feature scope
+                - Created when the user navigates to a certain feature and destroyed when the user navigates away
+                - Uber pick me up feature - location is fetched once and then not retrieved again
+                - Interaction scope
+                    - Created when a gesture is recognized and destroyed when the gesture ends - short lived scope
+        - Every scope should have a container class
+        - Designing a container hierarchy
+            - Rule: A child container can ask for the dependencies from its parent container all the way to the root container but the parent container cannot ask for a dependency from the child container
+                - Reason: A parent container lives longer than a child container so there could be a call where the child container might not exist anymore
+            - Child containers need to be provided with parents containers with initializer injection
+            - Capturing data
+                - A container can capture data model values by converting mutable values to immutable values
+                - Makes the code more deterministic because there is no need to consider a change in the captured value. New values will just replace the captured value
+            - Pros
+                - Scoping allows dependencies that aren't singletons to exist
+                - Mutable values can be converted into immutable values
+            - Cons
+                - More complex
+                - Complex apps can end up with long container classes
 - Applying DI theory to iOS Apps
+    - Since Cocoa touch is an object oriented SDK, every iOS app consists of an object graph at runtime
+        - The instance of UIApplication is the root of an app's object graph
+            - In particular, the UIApplicationDelegate, the child of UIApplication, is the main entry point for iOS apps
+    - Koober object graph
+        - Authentication object graph
+            - UserSessionRespository's dependency graph
+                - AuthRemoteAPI
+                    - Networking side
+                    - Implementations of this protocol are responsible for talking to Koober's cloud services to sign in and sign up users
+                    - Koober Cloud returns a token for successful authentication attempts
+                - UserSessionCoding
+                    - Implementations of this should encode a UserSession object into Data and decode Data into a UserSession object
+                - UserSessionDataStore
+                    - Implementations store a user session for a signed in user
+                    - Can be stored in Keychain, files, and other places
+                - UserSessionRepository
+                    - CRUD protocol for managing user sessions
+                    - Stateful - lives as long as the app
+        - LaunchViewController's dependency graph
+            - NotSignedInResponder
+                - User authentication protocol
+                - Called when a user is not signed in
+                - MainViewModel implements this
+            - SignedInResponder
+                - User auth protocol
+                - Called when objects determine a user is signed in
+                - MainViewModel implements this
+            - LaunchViewModel
+                - Holds UI state for a LaunchViewController
+                - Ephemeral dependency since app only ever cold starts once in its lifetime
+            - LaunchViewController
+                - Looks for a signed in user and presents a splash screen
+                - Depends on LaunchViewModel to search
+        - OnBoardingViewController's dependency graph
+            - OnboardingViewModel
+                - Holds UI state for an OnBoardingViewController
+                - Long lived dependency even while the user is signed out
+            - OnBoardingViewController
+                - If user is not signed in, MainViewController presents this
+                - Container view with life time as long as the user is not signed in
+                - Responsible for navigation between welcome, sign up, and sign in screens
+            - GoToSignUpNavigator
+                - UI navigation protocol
+                - Implementor responsible for taking the user to the sign up screen
+                - OnBoardingViewModel implements this
+            - GoToSignInNavigator
+                - UI navigation protocol
+                - Takes user to the sign in screen
+                - OnBoardingViewModel implements this
+            - WelcomeViewModel
+                - Holds UI state for a WelcomeViewController
+            - WelcomeViewController
+                - Renders a welcome screen from which users can navigate to either the sign in or sign up screen
+            - SignInViewModel
+                - Holds UI state for SignInViewController
+            - SignInViewController
+                - Users sign in to Koober in this view controller
+            - SignUpViewModel
+                - Holds UI state for SignUpViewController
+            - SignUpViewController
+                - Users sign up to Koober in this view controller
+        - MainViewController's dependency graph
+            - MainViewModel
+                - Holds UI state for MainViewController
+                - Stateful
+            - MainViewController
+                - Koober's root view controller
+                - Container view controller that manages top level navigation
+- Applying the on-demand approach
+    - Instantiating MainViewController
+        - Initializer method signature takes a MainViewModel and LaunchViewController as dependencies
+            - MainViewModel has no parameters so it is easy to instantiate
+                - let mainViewModel = MainViewModel()
+            - LaunchViewController has a LaunchViewModel as a parameter
+                - A LaunchViewModel has a UserSessionRepository, NotSignedInResponder, and SignedInResponder as dependencies
+                - Insight
+                    - Decomposing large objects into single responsibility objects result in deep object graphs
+                    - Thus, the on-demand approach is not practical for real world apps that have large and deep object graphs
+                - Creating a UserSessionRepository
+                    - Koober resolves this protocol through an implementation named KooberUserSessionRepository
+                        - Stateful - create this object once so all OUCs can use the same instance
+                        - Set up as a global constant
+                        - Takes in a UserSessionDataStore and AuthRemoteAPI implementation as initialization parameters
+    - Creating the MainViewController
+        - The UserSessionRepository is the only shared instance needed to create this
+        - MainViewModel acts as the NotSignedInResponder and SignedInResponder for LaunchViewModel's initializing parameters
+        - LaunchViewController is created by taking in the LaunchViewModel as a parameter
+        - Then, both MainViewModel and LaunchViewController are passed in as parameters to MainViewController's initializer
+    - Creating an OnBoardingViewController
+        - Needs an OnBoardingViewModel, WelcomeViewController, SignInViewController, and SignUpViewController as parameters
+        - OnBoardingViewModel
+            - Created with no initialization parameters
+        - WelcomeViewController
+            - Needs a WelcomeViewModel to initialize
+                - WelcomeViewModel
+                    - Needs a SignUpNavigator and SignInNavigator
+                    - OnBoardingViewModel is passed in to fulfill both these parameters
+        - SignInViewController
+            - Needs a SignInViewModel
+            - SignInViewModel
+                - Needs a UserSessionRepository and SignedInResponder
+                    - UserSessionRepository
+                        - Created using the global UserSession constant
+                    - SignInResponder
+                        - MainViewModel is passed in
+        - SignUpViewController
+            - Same as SignInViewController but with SignUpViewModel
+- Applying the factories approach
+    - Creating a shared UserSessionRepository
+        - Same as the previous GlobalUserSessionRepository but with object initializations distributed into factory methods, one for each dependency
+        - Benefits
+            - Hides implementation substitutions
+                - Gives more flexibility to change which date store to use by changing one method
+    - Creating a simplified MainViewController with the factory approach
+        - Creating a MainViewModel in KooberObjectFactories
+            - A global constant(can only be initialized once) is created for MainViewModel since MainViewModel is stateful
+        - Creating a LaunchViewController
+            - The same as on demand but shorter and with more abstraction due to factory methods
+            - Since KooberObjectFactories is stateless, it doesn't know that MainViewModel is a long lived dependency and thus can't create a NotSignedIn and SignedInResponder, requiring dependencies to be passed from outside the factory class
+    - Benefits
+        - Centralizes dependency graph code
+        - For creating more ephemeral dependencies, the client implementation would never change, only the factory class would have to
+    - Cons
+        - For creating more long lived dependencies, both client and factory implementation would have to change.
+        - But this problem is solved when upgrading to a container class
+    - Creating Koober's MainViewController initializer
+        - Adds an extra closure as a parameter to inject when making the onBoardingViewController
+        - The closure becomes useful later when creating a new OnBoardingViewController as all MainViewController has to do is invoke the empty argument makeOnBoardingViewController closure property that it was initialized with
+        - Thus, MainViewController doesn't have to know anything about the dependency graph needed to create a new OnBoardingViewController
+- Applying the single container approach
+    - Containers are stateful - holding onto long lived dependencies
+    - Factory methods don't need parameters anymore since methods in a container can use other methods inside to create ephemeral dependencies and access stored properties to get long lived dependencies
+    - Steps
+        - Create and store the shared UserSessionRepository
+            - Declare a constant stored property for UserSessionRepository
+            - Create factory methods inside the container's initializer since Swift doesn't allow an initializer to call a method on self until all stored properties are initialized
+            - The stored property is initialized by the inlined factory methods
+        - Creating MainViewController
+            - Required objects
+                - A shared MainViewModel
+                    - Add a constant stored property
+                    - MainViewModel doesn't require any parameters to initialize so you can either declare "let sharedMainViewModel = MainViewModel()" at the start or initialize it in the init() method
+                - An OnBoardingViewController factory closure
+                    - Add an optional stored property for onBoardingViewModel because OnBoardingViewModel is only needed when a user is not signed in
+                    - Add factory methods outside init to create the view controller
+                    - A new OnBoardingViewController is created every time this method is called but with the same view model instance
+                - A LaunchViewController
+                    - Add 2 factory methods, makeLaunchViewController and makeLaunchViewModel outside init to create the controller
+            - After setting up objects
+                - Call the makeLaunchViewController method
+                - Create a new closure for onBoardingViewControllerFactory, returning a new OnBoardingViewController every time the closure is called
+                - Return a MainViewController with the sharedMainViewModel, launchViewController and factory closure
+        - Setting up MainViewController and its entire graph when app starts
+            - Create the app container and store it in a constant inside app delegate
+            - Create the root object, MainViewController, by invoking the container's makeMainViewController method
+            - Great thing about this is that all other dependencies are provided from the outside so no parameters have to be provided to the method and nothing else has to be done
+    - Insight
+        - All other classes have no idea about the dependency containers
+        - Therefore, using DI introduce things into your existing code you might want to get  rid of later
+- Applying the container hierarchy approach
