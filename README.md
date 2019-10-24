@@ -18,5 +18,3 @@ Inspired by Gary Vaynerchuk to just create and share.
 - Code
   - Swift
     - Advanced iOS App Architecture
-- Daygame
-  - Ping Texts
