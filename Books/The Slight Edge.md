@@ -165,3 +165,40 @@
         - In "Think and grow rich", Napoleon Hill talks about the mastermind, a group of people with like minds and different talents all with the purpose of serving the goals of every member of the group.
 
 > Using those three dimensions of learning—study, do, model—with slight edge persistence, in time your level of mastery rises to the point where you turn around and realize others are modeling you. You have yourself become worthy of emulating, of serving as a guide and hero to others. The cream has become butter; the hyacinth of knowledge has covered the pond of your effort. You have grown into leadership—and now you're the mentor.
+
+### Chapter 14: Use your slight edge allies
+
+> Be not afraid of going slowly; be afraid only of standing still
+
+- Momentum
+    - The tortoise vs hare fable demonstrates this well
+        - The key phrase is "slow but steady" and the key word is "steady" because steady actions create momentum
+    - Going too fast often puts one's system's survival at risk
+    - Find your own optimal speed of growth
+    - Do daily activities that boost your momentum as they will help you keep yourself on track once you've started
+
+    > Give yourself something to work toward—constantly
+
+- Completion
+    - Each incomplete thing in your life sucks away from your energy of accomplishment
+    - Incomplete things drag you to the past
+        - Successful people are pulled by the future
+    - Take on incomplete tasks one at a time
+- Reflection
+    - Doing things won't create success; doing things right will
+    - Questions to ask
+        - Did you take a step forward?
+        - Did you listen to good information today, or just tune into music?
+        - Did you engage in positive conversation or just gossip?
+        - Did you do what unsuccessful people aren't willing to do?
+    - Keep your progress, or the lack of it, right in your face
+    - A powerful exercise
+        - At the end of each day, write down what you did that day
+        - Then ask yourself these questions
+            - In each area of my life, what are the critical, simple little things that are easy to do, and easy not to do?
+            - Did I do them?
+            - Did I move forward?
+            - Did I ride the success curve?
+- Celebration
+    - Notice slight edge activities you accomplish and feel good about them
+    - Trust the process and when you notice it's going well, celebrate
