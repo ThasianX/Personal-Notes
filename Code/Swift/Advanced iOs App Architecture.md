@@ -361,3 +361,83 @@
         - When an OUC needs multiple instances of a dependency, inject a factory closure or inject an object that conforms to a factory protocol
 
 ### Chapter 5: Architecture: MVVM
+
+- History
+    - Introduced by Microsoft architects in the early 2000s
+        - Used to simplify design and development using XAML platforms
+    - Prior to MVVM, designers would tightly couple views and business logic by writing view specific code
+- Present
+    - Today, the way most projects start is that graphic designs are done of the project first and then developers write the code for views
+    - MVVM is used in iOs to decouple views from models
+        - iOS designers can freely change the user interface and iOS developers won't need to change much business logic
+- What is it
+    - Reactive architecture
+        - View reacts to changes on the view model and view model updates its state based on data from the model
+
+        ![](mvvm.png)
+
+    - 3 layers
+        - Model
+            - Contains data access objects and validation logic
+            - Knows how to read and write data
+            - Notifies view model when data changes
+        - View model
+            - Contains the state of the view
+            - Contains methods that handle user interaction
+            - Reads and writes data by calling on the model layer
+            - Notifies the view when the model's data changes
+        - View
+            - Styles and displays on-screen elements
+            - No business or validation logic
+            - Binds visual elements to properties on the view model
+            - Notifies view model when it receives user inputs and interaction
+- Model layer
+    - Responsible for CRUD
+    - Design patterns
+        - Push and pull
+            - Pull - requires consumers to ask for data and wait for the response
+            - Push - consumers can update the model data and tell the model layer to send it
+        - Observe and push
+            - Observe - consumers are required to observe, instead of ask for data directly
+            - Push - consumers can tell the model layer to update the model data
+        - Koober's design
+            - Uses an implementation of the repository pattern, a form of push and pull design
+        - Repository pattern
+            - Contain data access objects that can call out to a server and read from a disk
+
+            ![](repositoryPattern.png)
+
+            - Provides a facade for networking, persistence, and in-memory caching
+                - CRUD operations aren't exposed to consumers
+                - Data retrieved afterward is exposed to the views
+            - CRUD implementations can be stateful or stateless, depending on whether you want the data to be saved for later
+            - Multiple layers for data access
+                - Cloud remote API
+                    - Makes calls to servers to read and update data
+                    - REST calls → gets data from a socket connection or other means
+                - Persistent store
+                    - Puts data in local database
+                    - Core Data, Realm, Plist, etc
+                - In memory cache layer
+                    - Stores data in objects to stay around for the lifetime of the repository
+                    - Cache doesn't persist between app sessions
+            - KooberUserSessionRepository
+                - Handles all user related activity in the app
+                - Flow
+                    - Sign up
+                        - Makes a call to the Koober Cloud REST API
+                        - Creates a user session from the response
+                        - Saves the user session in a persistent store
+                        - Benefits
+                            - Since none of the internal implementation is exposed to consumers, the underlying implementation could change to call out a different REST API and store the data in an in memory cache instead and the consumers wouldn't be affected
+                    - Sign in
+                        - Takes in an email and password
+                        - Asynchronously returns a user session object
+                        - API caller only cares about getting the latest user session, not caring where it comes from
+                            - This allows flexibility in implementations while keeping the user interface layer stable
+- View layer
+    - Reacts to state changes through bindings to view model properties
+        - View model is the single source of truth
+    - Notifies view model of user interaction
+    - Purpose of the view is to render the screen
+- View model layer
