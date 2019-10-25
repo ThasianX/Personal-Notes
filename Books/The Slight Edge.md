@@ -202,3 +202,43 @@
 - Celebration
     - Notice slight edge activities you accomplish and feel good about them
     - Trust the process and when you notice it's going well, celebrate
+
+### Chapter 15: Cultivate slight edge habits
+
+- Every one of your habits - good or bad - have their roots in choice, until they become automatic and take a life of their own
+- Your activities are the results of your choices in the present moment
+- The best way to get rid of unwanted habits are to replace them with a habit you do want
+- Power slight edge habits
+    - Show up
+        - Be the frog who not only decides to jump off but actually jumps
+
+        > Do the thing and you shall have the power
+
+        - By just committing to showing up, you have already won half the battle
+
+        > Hope begins in the dark, the stubborn hope that if you just show up and try to do the right thing, the dawn will come. You wait and watch and work: you don't give up.
+
+    - Be consistent
+        - Show up consistently
+    - Have a positive outlook
+        - Approaching the events of life with a positive outlook helps move you toward your goals
+        - Notice other people's better qualities and look past their weaker ones
+        - But cultivating a positive outlook doesn't mean you can't get depressed
+            - Depression hits everyone at random times
+            - The first thing you want to do is go through your list of blessings, things you're thankful for
+            - Embrace the hard and difficult times because you know it will make you stronger
+    - Be committed for the long run
+
+        > It takes a long time to grow an old friend
+
+        - Ask yourself, are you willing to put in 10,000 hours to get what you want?
+    - Cultivate a burning desire backed by faith
+        - The kind of faith that keeps you up late at night and gets you up early in the morning
+        - The ones who achieve great things not only passionately want to achieve their dreams but also see themselves achieving them
+            - They deeply and passionately want to get somewhere and they know - not hope or wish - that they are going to get there
+    - Be willing to pay the price
+        - Whatever price you pay, there's a bigger price to pay for not doing it than the price for doing it
+            - Success may take you 5 to 10 years to achieve but failure will take a you a lifetime
+    - Practice slight edge integrity
+        - This is what you do when no one is watching
+        - Do you hold yourself accountable to what you said you were going to do?
