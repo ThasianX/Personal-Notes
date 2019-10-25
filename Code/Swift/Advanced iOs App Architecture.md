@@ -320,5 +320,44 @@
             - Great thing about this is that all other dependencies are provided from the outside so no parameters have to be provided to the method and nothing else has to be done
     - Insight
         - All other classes have no idea about the dependency containers
-        - Therefore, using DI introduce things into your existing code you might want to get  rid of later
+        - Therefore, using DI introduce things into your existing code you might want to get rid of later
 - Applying the container hierarchy approach
+    - Helps scope containers so you don't have to force unwrap objects
+    - KooberOnboardingDependencyContainer
+        - The long lived dependencies from the app dependency container are held in the class so factory methods can have easy access to them
+        - sharedOnBoardingViewModel is constant and only lives as long as the container, eliminating the optional it previously had
+        - The app dependency container is the on boarding container's parent container and provides factory methods needed for the child container to set its long lived dependencies
+    - AppDependencyContainer
+        - Now, since the onboarding is scoped, the closure method for creating an onBoardingViewController now needs to be updated
+            - A new instance of the onboardingDependencyContainer is created and its method makeOnBoardingViewController is returned to the closure
+    - AppDelegate
+        - Making a MainViewController and its entire graph is still the same as the single container approach.
+        - Insight
+            - Refactoring a single container into a container hierarchy didn't change the implementing code
+- Key points
+    - Main benefits of good architecture
+        - Testability and maintainability
+    - Object graphs are formed by consumers that need OUCs and OUCs that need transitive dependencies
+    - Fundamentals of managing object dependencies
+        - Accessing dependencies
+        - Determining substitutability
+        - Designing substitutability
+    - Main dependency patterns
+        - Dependency injection
+        - Service locator
+        - Environment and protocol extensions
+    - Dependency injection
+        - Provides dependencies from outside of objects
+        - Types of injection
+            - Initializer
+            - Property
+            - Method
+        - Applications
+            - On demand
+            - Factories
+            - Single container
+            - Container hierarchy
+        - Construct an entire object graph upfront so you know how the flow goes as you're writing the code for it
+        - When an OUC needs multiple instances of a dependency, inject a factory closure or inject an object that conforms to a factory protocol
+
+### Chapter 5: Architecture: MVVM
