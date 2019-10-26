@@ -441,3 +441,100 @@
     - Notifies view model of user interaction
     - Purpose of the view is to render the screen
 - View model layer
+    - Contains a view's state
+    - Contains methods for handling user interactions and bindings to different UI elements
+    - Takes in input signals and produce output signals
+    - Structure
+        - View State
+            - Made up of public observable properties
+            - UI elements bind themselves to the observables when view model is created
+        - Task methods
+            - Perform tasks in response to user interactions
+                - Updates the view model's state afterwards
+                - The view is aware of states changes because of observables
+            - Usually marked as @objc methods
+        - Dependencies
+            - Passed to view model through initializer injection
+            - Task methods rely on the dependencies to communicate with other subsystems in the app, such as REST API or persistent store
+            - The view model knows how to use dependencies but is unaware of the underlying implementations
+    - Koober sign in view model
+        - Dependencies
+            - UserSessionRepository
+                - Calls the Koober sign in API to authenticate with email and password
+            - SignedInResponder
+                - Handles a successful sign in, signaling a switch in app state from onboarding to signed in
+        - View state
+            - emailInput and passwordInput
+                - Bind to the text fields of the view
+                - Update each time new text is entered
+            - errorMessages
+                - Contains a lis of strings
+                - View presents the error each time a new string is added to the list
+        - Task method
+            - signIn()
+                - Asks the UserSessionRepository to sign in using emailInput and passwordInput
+                - Success: view model gives SignedInResponder the new user session
+                - Failure: view model adds the error to errorMessages and the view displays the error
+        - Creating the view
+            - View controller creates the view model first and passes it to the view inside loadView()
+    - Container views
+        - Use
+            - Builds a complex screen out of modular views
+                - Modular views are small, focused, and reusable
+        - Initialized by dependency container
+            - Adds and displays child views in its view hierarchy
+            - Each child view limits the responsibility of the top level container
+        - Moves coordination of view code out of the view model
+            - Even if you don't need to reuse the view, this lets you change the structure of the app without having to change code in every view model
+        - Koober ride request
+            - Map and ride option picker
+                - Child views that can live on their own
+            - Pick me up container view
+                - Parent container
+    - Communicating amongst view models
+        - To notify other models of a change in state, a view model signals out what occurred rather than what to do
+            - Provides flexibility as you can change how the app responds without having to change the view model
+        - Collaborating view models
+            - Ways to collaborate
+                - Closures
+                    - For signaling out, view models take a closure as an initializer argument
+                    - View model calls the closure when an event occurs
+                - Protocols
+                    - Each output signal is modeled with a single method protocol
+                    - Other view models that want to respond have to conform to the protocol
+                - Observables
+                    - For outgoing signals, view model exposes a mutable observable subject that other view models can modify by pushing new state onNext()
+    - Navigating
+        - Model driven navigation
+            - Flow
+                - View models contain a view enum describing all possible navigation states
+                - System observes this and navigates to the next screen when a value changes
+            - Parent and child
+                - Container views and view models handle navigation for children
+                - Children signal out to the container view model that handles navigation in 2 ways
+                    - Collaborating view models
+                        - Signal to each other when a view enum changes
+                        - Child view models get injected with a higher level view model and call task methods when navigation should occur
+                    - Shared observable view state
+                        - Holds a mutable Observable subject property with the current view enum value
+                        - A dependency container injects child view models with the Observable subject
+                            - Allows any child view model to push a new view enum value
+                            - Container view model navigates to next screen based on value changes
+    - System driven navigation
+        - Definition
+            - Any navigation managed by the system
+            - ie back button
+        - Pure MVVM overrides all these system gestures but what's better is to leverage the system already provided
+    - Combination of system and model driven navigation
+        - ie model driven navigation for moving a navigation stack forwards and a system driven navigation for moving backwards
+    - Managing state
+        - Creating new views on navigation
+            - System deallocates views each time the application dismisses them
+            - This means there will be no state changes when the view is offscreen
+            - Koober example
+                - Creates finding your location screen before any transitions
+                - After finding your location, it presents the map and destroys and deallocates the finding your location screen
+        - Reusing views on navigation
+            - Makes sense when state needs to be preserved
+            - ie Tab bars hold onto a list of view controllers that live in memory and navigation controllers reuse views when moving backwards in the stack
+- Applying theory to iOS apps
