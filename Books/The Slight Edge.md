@@ -242,3 +242,34 @@
     - Practice slight edge integrity
         - This is what you do when no one is watching
         - Do you hold yourself accountable to what you said you were going to do?
+
+### Chapter 16: Three steps to your dreams
+
+- Step one: Write it down
+    - This helps with envisioning your dream
+        - Envisioning is simply creating a vivid picture of something that hasn't factually happened yet and to make that picture so vivid that it feels real
+    - My goals - what and when
+        - I would love to have multiple vacation houses all the over the world when I travel. A house in China, London, Italy, California, Hawaii, Canada, Japan, and Korea. I want to have these houses by the time I'm 30 years old.
+        - I would love to marry a beautiful wife who's also passionate about success. Someone who is understanding about the sacrifices I would have to make in terms of relationship time. Someone who will empower me in my work and outside my work. I want to find the perfect wife by the time I'm 35 years old.
+        - I would love to become the biggest and baddest CEO of a technology company that innovates the future, making virtual reality chips to download human consciousness and designs space shuttles that allow for intergalactic exploration. I want to become a successful CEO by the time I'm 25.
+        - I would love to be the richest person in the world. So much money, even richer than the current Jeff Bezos, that I can virtually control countries and governments. My money would be spent towards catalyzing human civilization in our inevitable transition towards sustainable energy, intergalactic exploration, virtual reality, and augmented reality. I want this to happen by the time I'm 25.
+        - I would love to have radiant health even as I grow older. I would engage in lifting consistently and feel pumped and energetic afterwards. I want my strength to keep progressing, going against what people think as people get older. I want this to happen from now all the way until the day I die.
+- Step two: Look at it everyday
+    - Helps to counteract the force of mediocrity
+    - Utilizes the power of the subconscious mind
+    - Surround yourself with your own yesses
+    - Know that your own dreams are inevitable
+- Step three: Start with a plan
+    - The point of a plan is not to get you there but to help you get started
+        - It is your jumping off point
+
+    > Success is the progressive realization of a worthy ideal
+
+    - Keep holding onto this philosophy, which will help you generate the attitudes and actions needed to keep progressively realizing a better plan
+
+> Whatever you can do or dream you can, begin it. Boldness has genius, power and magic in it
+
+- Don't try to figure out the whole race. Just take that bold step onto the path of mastery. The result looks incredibly complex and intimidating but it's not
+- Personal story tips
+    - Change your language from "can't, maybe, don't know" to "can, sure, I will figure it out"
+    - When faced with disappointment and failure, ask yourself, "What did you learn?"
