@@ -1,4 +1,4 @@
-## [Meditations](https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255/ref=pd_sbs_14_t_0/142-1864483-9272515?_encoding=UTF8&pd_rd_i=0812968255&pd_rd_r=209bfd7f-899f-403a-858c-787f21a31dc7&pd_rd_w=QouNF&pd_rd_wg=LK5Za&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=Z9ZP0D4R6HKYK6KMM8G0&psc=1&refRID=Z9ZP0D4R6HKYK6KMM8G0)
+# [Meditations](https://www.amazon.com/Meditations-New-Translation-Marcus-Aurelius/dp/0812968255/ref=pd_sbs_14_t_0/142-1864483-9272515?_encoding=UTF8&pd_rd_i=0812968255&pd_rd_r=209bfd7f-899f-403a-858c-787f21a31dc7&pd_rd_w=QouNF&pd_rd_wg=LK5Za&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=Z9ZP0D4R6HKYK6KMM8G0&psc=1&refRID=Z9ZP0D4R6HKYK6KMM8G0)
 
 ### Books 1-4
 

@@ -1,4 +1,4 @@
-## [Advanced iOS App Architecture](https://store.raywenderlich.com/products/advanced-ios-app-architecture)
+# [Advanced iOS App Architecture](https://store.raywenderlich.com/products/advanced-ios-app-architecture)
 
 ### Chapter 2: Which architecture is right for me
 

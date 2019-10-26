@@ -1,4 +1,4 @@
-## [The Slight Edge](https://www.amazon.com/Slight-Edge-Turning-Disciplines-Happiness-ebook/dp/B07G2D82DM/ref=sr_1_1?crid=36N22HON8STXS&keywords=the+slight+edge&qid=1571634992&sprefix=the+sligh%2Caps%2C228&sr=8-1)
+# [The Slight Edge](https://www.amazon.com/Slight-Edge-Turning-Disciplines-Happiness-ebook/dp/B07G2D82DM/ref=sr_1_1?crid=36N22HON8STXS&keywords=the+slight+edge&qid=1571634992&sprefix=the+sligh%2Caps%2C228&sr=8-1)
 
 ### Chapter 1: The beach bum and the millionaire
 

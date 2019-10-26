@@ -1,4 +1,4 @@
-## [Deep Work](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/B0189PVAWY/ref=sr_1_2?keywords=deep+work&qid=1571634872&s=books&sr=1-2)
+# [Deep Work](https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/B0189PVAWY/ref=sr_1_2?keywords=deep+work&qid=1571634872&s=books&sr=1-2)
 
 ### The Benefits
 
