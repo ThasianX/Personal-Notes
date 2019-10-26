@@ -374,7 +374,7 @@
     - Reactive architecture
         - View reacts to changes on the view model and view model updates its state based on data from the model
 
-        ![](mvvm.png)
+        <img src="./mvvm.png" width="600" height="300">
 
     - 3 layers
         - Model
@@ -405,7 +405,7 @@
         - Repository pattern
             - Contain data access objects that can call out to a server and read from a disk
 
-            ![](repositoryPattern.png)
+            <img src="./repositoryPattern.png" width="600" height="300">
 
             - Provides a facade for networking, persistence, and in-memory caching
                 - CRUD operations aren't exposed to consumers

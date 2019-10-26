@@ -41,7 +41,7 @@
     - This becomes a problem if other people also want to use your movie finder but instead of storing their movie listings in a colon delimited file called "movies1.txt", they use something else like SQL or XML
     - Then, we need a different class to grab that data
 
-    ![](movielister.png)
+    <img src="./movielister.png" width="400" height="300">
 
 - Based on the above figure, the question is how do you make it so that the lister class is ignorant of the implementation class but can still talk to an instance to do its work
     - In real systems, you can abstract the use of components by talking to them through an interface.
