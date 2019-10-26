@@ -18,5 +18,7 @@ Below are my compiled insights and notes from books I've read, experiences I've 
 - Code
   - Algorithms and Data Structures
     - Algorithms 4th Edition
+  - General
+    - Inversion of Control Containers and the Dependency Injection pattern
   - Swift
     - Advanced iOS App Architecture
