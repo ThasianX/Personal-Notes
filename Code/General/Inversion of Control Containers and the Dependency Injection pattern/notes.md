@@ -61,3 +61,55 @@
     - The general consensus now is *Dependency Injection*
 
 ### Forms of dependency injection
+
+- Basic idea
+    - Have a separate object that populates a field in the lister class with an appropriate implementation for the finder interface
+
+        <img src="./injectiondependencies.png" width="500" height="300">
+
+- Constructor injection with PicoContainer
+    - PicoContainer
+        - Uses constructor to decide how to inject a finder implementation into the lister class
+    - Process
+        - Create a constructor in movie lister that includes it needs injected
+        - Create a parameter for the filename of the text file for the finder's constructor
+        - Pico container then determines which implementation to associate with each interface and which string to inject into the finder
+- Setter injection with Spring
+    - Process
+        - Define a setting method for the finder in MovieLister
+        - Define a setter in the file name for the MovieFinder
+        - Set up the configuration for the files
+            - Spring supports configuration through XML and through code
+- Interface injection
+    - Process
+        - Define an interface to perform the injection through
+        - This interface would be defined by the class that provides the MovieFinder instance
+        - Have MovieLister, the class that wants to use a finder, implement it
+
+### Using a service locator
+
+- Basic idea
+    - Have an object that knows how to get hold of all the services that an application might need
+    - For this application, there would be a method that returns a movie finder when one is needed
+
+    <img src="./servicelocatordependencies.png" width="400" height="300">
+- Service locator as a Registry
+    - MovieLister calls on a method in the ServiceLocator when it's instantiated
+    - Problem
+        - MovieLister is dependent on the full service locator class, even though it only uses 1 service
+- Using a segregated interface for the locator
+    - Addresses the service locator problem above through a role interface
+    - The MovieLister can declare just the bit of interface it needs from the locator interface
+    - Process
+        - The provider of the MovieLister would also need to provide a locator interface which it needs to get hold of the finder
+        - The locator then needs to implement this interface to provide access to a finder
+- A dynamic service locator
+    - Basic idea
+        - Allows you to stash any service you need into it and make your choices at runtime
+        - Uses a map instead of fields for each of the services and provides generic methods to get and load services
+    - Drawbacks
+        - Not as explicit as a segregated interface
+- Using both a locator and injection
+    - Example
+        - Avalon uses injection to tell components where to find the service locator
+        - Use interface injection to inject a service manager into a class
