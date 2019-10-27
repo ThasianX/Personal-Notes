@@ -273,3 +273,66 @@
 - Personal story tips
     - Change your language from "can't, maybe, don't know" to "can, sure, I will figure it out"
     - When faced with disappointment and failure, ask yourself, "What did you learn?"
+
+### Chapter 17: Living the slight edge
+
+- It's all about finding that single, simple, easy to do activity you can do every day that will have the greatest impact on your health, happiness, relationships, personal development, finances, career, and impact on the world
+- Health
+    - My dreams
+        - By the time I'm 20, I hope to have put on 20-30 lbs of muscle mass but also be low in body fat. By the time I'm 40, I hope to still be as strong as I was in my prime. By the time I'm 60, I hope to have good heart conditions
+    - Plan to start
+        - Follow 5/3/1 program. 4 times a week at the gym. During my cuts, cardio every day. Intermittent fasting every day. Sleeping at least 7 hours every day.
+    - Simple daily discipline
+        - Eat healthy. More greens and more proteins. Less processed and junk food. Sleep by 11:15 pm every day
+- Happiness
+    - Happiness leads to success, not the other way around
+    - The most significant factors for your happiness are not circumstantial, but rather your actions
+        - Your outlook on life
+        - Specific actions with positive impact
+        - Where you put your time and energy
+    - My dreams
+        - To fully detach my happiness from the thoughts and actions of others. I want to subconsciously have a mindset that derives happiness from the pleasure of making good small choices daily.
+    - Plan to start
+        - Follow my morning routine
+    - One simple daily discipline
+        - Do what I want to do and ignore what others may think
+- Relationships
+    - All the success means little if there is no one to share it with
+- Personal development
+    - I'd rather be worth a million than to have a million dollars - the million dollar mindset
+
+    > You will become as small as your controlling desire, or as great as your dominant aspiration
+
+    - Dreams
+        - To keep learning and absorbing all the information I can possibly get my hands on.
+    - Plan to start
+        - Listen to audiobooks when I walk
+    - Simple daily discipline
+        - Active listening to material
+- Finances
+
+    > Winning is a habit. Unfortunately, so is losing
+
+    - A losing habit is "whatever I have, I spend"
+    - Dreams
+        - Get filthy rich and not have to worry about how much I spend
+    - Plan
+        - Start investing in stocks to use the returns to buy things I want
+    - Simple daily discipline
+        - Read about stocks, buy stocks, and sell stocks
+- Career
+    - Dreams
+        - To become a successful CEO
+    - Plan
+        - Love working
+    - Simple daily action
+        - Spend time every day learning coding
+- Positive impact on the world
+    - Dreams
+        - To make the future a more exciting place
+    - Plan
+        - Think futuristically
+    - Simple daily action
+        - Think about problems that need to be solved
+
+> And remember this, too, no matter how high-minded or long-term your life dreams may seem: "Gentlemen, this is a football". It starts with a penny. Start finding your pennies.
