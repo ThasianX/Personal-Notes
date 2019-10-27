@@ -538,3 +538,38 @@
             - Makes sense when state needs to be preserved
             - ie Tab bars hold onto a list of view controllers that live in memory and navigation controllers reuse views when moving backwards in the stack
 - Applying theory to iOS apps
+    - Building a view for the sign in
+        - Model layer
+            - Uses repository pattern for accessing data, specifically the UserSessionRepository protocol
+                - The repository has methods for reading the user session and authenticating a user
+                - All methods return a promise with a UserSession object
+            - UserSession is a class that contains a profile and user session
+            - UserProfile contains metadata about the user
+            - RemoteUserSession contains an AuthToken
+        - View model layer
+            - SignInViewModel holds all the view states and signs the user in
+                - Dependencies
+                    - UserSessionRepository used to authenticate the user
+                    - SignedInResponder handles a successful sign in by switching the app state from onboarding to sign in
+                - SignIn
+                    - Calls indicateSigningIn() first to disable user input and shows an activity indicator as it's validating
+                    - Next, it checks to see if the email and password are not empty
+                    - Then, it uses the email and password to try signing in
+                    - A success causes signedInResponder to update the app with a new UserSession
+                    - A failure causes the app to display an error
+        - View layer
+            - SignInViewController
+                - Manages SignInRootView's lifecycle
+                - Injected with a SignInViewModelFactory which creates a view model
+                - The view model is injected into SignInRootView when the view is loading
+            - SignInRootView
+                - Handles user interface updates
+                - bindTextFieldsToViewModel()
+                    - Binds email and password textfield observables to the view model's behavior subject for each
+                    - Any time the user enters text into the email text field, the emailInput value of the view model changes
+                    - Uses rx properties to drive the view model's corresponding behavior subjects
+                - bindViewModelToViews()
+                    - Binds the isEnabled flag for email, password, sign in button, and sign in activity indicator in the view model to respective components in the view
+                    - For example, the emailField's isEnabled flag is bound to the view model's emailInputEnabled subject such that when emailInputEnabled is changed, emailField enables or disables
+                    - ViewModel initiates the changes in the view
+    - Composing views for the pick me up screen
