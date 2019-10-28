@@ -113,3 +113,33 @@
     - Example
         - Avalon uses injection to tell components where to find the service locator
         - Use interface injection to inject a service manager into a class
+
+## Deciding which option to use
+
+### Service locator vs dependency injection
+
+- Both provide the fundamental decoupling missing from the naive approach
+- Difference
+    - Service locator
+        - The application class of the service locator asks for the implementation explicitly by a message to the locator
+        - Every user of a service has a dependency to the locator
+    - Dependency injection
+        - In injection, the service appears in the application class, hence the inversion of control
+        - Hard to understand at times and leads to problems while debugging
+        - Makes it easier to see what the component dependencies are
+- When to use which
+    - Service locator
+        - Applications with various classes that use a service
+    - Dependency injection
+        - Providing to an application that other people are writing to
+        - Component cannot obtain further services from the injector once it's been configured
+
+### Constructor vs setter injection
+
+- Constructor injection
+    - Constructors with multiple parameters give you a clear statement of what it means to create a valid object
+    - Allows you to clearly hide any fields that are immutable by simply not providing a setter
+    - Cons
+        - Can get a bit out of hand when there are multiple ways to construct an objects
+- Factory methods
+    - Use a combination of private constructors and setters to implement their work
