@@ -336,3 +336,13 @@
         - Think about problems that need to be solved
 
 > And remember this, too, no matter how high-minded or long-term your life dreams may seem: "Gentlemen, this is a football". It starts with a penny. Start finding your pennies.
+
+### Chapter 18: Where to go from here
+
+> Successful people go to work on their philosophy first, because they know it is the source of their attitudes, actions, results, and the quality of their lives.
+
+> They understand that they can increase their success by *doubling their rate of failure*
+
+> They understand activity and because they *do the thing*, they *have the power*
+
+> So, where do you go from here? Find your penny. And then start doubling it.
