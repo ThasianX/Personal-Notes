@@ -573,3 +573,112 @@
                     - For example, the emailField's isEnabled flag is bound to the view model's emailInputEnabled subject such that when emailInputEnabled is changed, emailField enables or disables
                     - ViewModel initiates the changes in the view
     - Composing views for the pick me up screen
+      - Flow
+          - User first selects where they want to be dropped off and then select and ride option
+          - The map then displays pins for their pick up and drop off locations, and the bottom container shows the ride option picker
+      - PickMeUpViewController
+          - Container view with two children and a view model
+          - Gets all of them from initialization injection
+          - The children notify PickMeUpViewModel when the user interacts with the views
+      - RideOptionPickerViewController
+          - Shows available ride options at the user's pick-up location and a confirm button
+          - Dependencies
+              - Pick up Location dependency to load the ride options at a specific coordinate
+              - An ImageCache dependency to get the Koober ride option icons
+              - A RideOptionPickerViewModelFactory to create the RideOptionPickerViewModel
+          - Uses the dependencies to load ride options
+      - RideOptionSegmentedControl
+          - Displays a button for each ride option
+          - Configures each ride option button to notify the view model when the ride option changes
+              - Since the view model is injected into the view, it has no idea how the underlying implementation works.
+              - The segmented control only knows how to make calls to the view model's select ride option task method
+      - RideOptionPickerViewModel
+
+          <img src="./rideoptionpickerviewmodel.png" width="600" height="300">
+
+          - Dependencies
+              - RideOptionRepository
+                  - Loads the ride options from the server
+              - RideOptionDeterminedResponder
+                  - Updates the pick me up view state with the new ride option selections
+                  - A protocol with a single method to handle selection - pickUpUser
+                  - In this case, the responder really just is the view model that implements the protocol
+                      - Using a protocol to signal out makes it so that you don't have to pass entire view models to each other and expose extra functionality
+          - Flow
+              - When a ride option button calls select(rideOption:RideOptionID), the method updates the isSelected state of the ride option buttons and tells the responder that you have selected a new ride option
+      - PickMeUpViewModel
+          - Describes the state of the pick me up screen using enums
+          - PickMeUpView
+              - Enums
+                  - initial
+                      - Displays the map with an initial hardcoded pick up location
+                  - selectDropOffLocation
+                      - Displays the select drop off location picker with a list of predefined drop off locations
+                  - selectRideOption
+                      - Displays the select ride option picker
+                      - Confirm button is hidden until you select a ride option
+                  - confirmrequest
+                      - Displays the select ride option picker with one option highlighted and a confirm button
+                  - sendingRideRequest
+                      - Displays the Requesting Ride screen
+                  - final
+                      - Dismisses the Requesting Ride screen
+          - PickMeUpRequestProgress
+              - Determines the user's pre-ride request state
+              - Enums
+                  - initial(pickupLocation:Location)
+                      - Configures the initial state with a pick up location
+                  - waypointsDetermined(waypoints: NewRideWaypoints)
+                      - Stores the pick up and drop off location once a user selects a drop off location from the list
+                  - rideRequestReady(rideRequest: NewRideRequest)
+                      - Stores the ride option selection along with the waypoints in a NewRideRequest object
+          - Flow
+              - View model contains a PickMeUpView observable and PickMeUpRequestProgress variable
+              - pickUpUser implementation
+                  - Creates a NewRideRequest with the selected ride option and waypoints
+                  - Updates the internal progress state with the new data
+                  - Updates the PickMeUpView observable to the .confirmRequest state
+          - Entire confirm request flow
+
+              <img src="./confirmrequest.png" width="600" height="300">
+
+              - PickMeUpViewController injects its PickMeUpViewModel into RideOptionPickerViewController
+                  - RideOptionPickerViewController uses the view model to create a RideOptionSegmentedControl
+              - RideOptionSegmentedControl tells its RideOptionPickerViewModel when the user selects a ride option
+              - RideOptionViewModel calls pickUpUser on its PickMeUpViewModel
+              - PickMeUpViewModel changes its state to .confirmRequest and PickMeUpViewController displays the confirm button
+    - Navigating
+      - Driving navigation
+          - Model driven navigation: View model state changes drive transitions in the user interface
+          - System-driven navigation: UIKit components drive navigation
+          - Combination of both model and system driven navigation
+      - Model driven navigation
+          - Koober
+              - Initial state shows the pick me up screen with your pick up location but no drop off location
+              - After tapping Where To, the button brings up a screen to select the drop off location
+              - After the location is selected, the pick me up screen now shows the drop off location along with a ride option picker
+          - PickMeUpRootView binds its whereTo button to the view model's showSelectDropOffLocationView() method
+              - The method updates the view model's view behavior subject state to .selectDropOffLocation
+              - PickMeUpViewController observes these changes by subscribing to the view observable property in the view model and calls present, creating the dropOffLocationViewController
+          - DropOffLocationPickerContentView
+              - Initialized with a DropOffLocationPickerViewModel
+                  - Has a task method to select a drop off location
+                  - Gets initialized with a DropOfLocationDeterminedResponder
+                      - It's a protocol but really just a PickMeUpViewModel that conforms to the responder protocol
+                  - When a drop off location is selected, the PickMeUpViewModel, since it implements the DropOfLocationDeterminedResponder protocol, calls its dropOffUser method
+                      - viewSubject state is updated to .selectRideOption
+                      - The view controller sees this and reacts by dismissing the select drop off location screen and showing the ride option picker
+              - Entire selection flow
+
+                  <img src="./dropoffflow.png" width="600" height="300">
+
+                  - PickMeUpViewController injects its view model into dropOffVC. dropOffVC creates a contentRootView with the view model
+                  - The contentRootView notifies the dropOffViewModel when the user selects a new drop off location
+                  - The dropOffViewModel calls dropOffUser on its pickMeUpViewModel
+                  - pickMeUpViewModel changes its state to .selectRideOption and the PickMeUpVC dismisses the screen
+      - System driven navigation
+          - UITabBarController example
+              - Tab bar uses system driven navigation to switch between child view controllers
+              - For its entire lifecycle, tab bar holds onto both child view controllers
+              - When a new view controller is selected, the tab bar handles transitions to the correct view controller
+      - Combination
