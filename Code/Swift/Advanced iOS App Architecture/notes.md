@@ -682,3 +682,61 @@
               - For its entire lifecycle, tab bar holds onto both child view controllers
               - When a new view controller is selected, the tab bar handles transitions to the correct view controller
       - Combination
+          - The Onboarding screen uses model driven navigation from the welcome screen to the sign in and then uses system driven navigation backwards to the welcome screen
+          - Model driven
+              - OnboardingVC subscribes to the OnboardingVM's observable value that determines the state of whether a view controller should be presented
+              - After OnboardingVC takes care of presenting a view controller, it doesn't handle backward taps, which is left to the system
+      - Managing state
+          - Create a new view each time the application presents a new screen
+              - Guarantees screen starts from the initial state each time it's presented
+              - Destroy and deallocate the current child and add the next child onto the screen
+          - Reusing views on navigation
+              - Each time you present a new screen, you need to make sure the state is reset back to the original state
+              - Examples
+                  - Navigation controllers reuse views when moving backwards
+          - Managing scopes: Onboarding to signed in
+      - Key points
+          - Model layer
+              - Reads and writes data to disk
+              - Tells the view model when data has changed
+          - View model layer
+              - Contains all the view layer's state and handles user interactions
+              - Listens for change in the model layer and updates its state
+          - View layer
+              - Reacts when view model state changes
+              - Tells the view model when the user interacts with its components
+          - Repositories
+              - Facade for networking and persistence
+              - View models use repositories for data access instead of performing the actions themselves
+          - The view layer and model layer are decoupled - the only way they communicate is through the view model layer
+      - Pros of MVVM
+          - View model logic is easy to test independently from the UI code
+              - View models only contain business and validation logic, no UI
+          - Decouples view and model
+          - Helps parallelize developer workflow
+              - One team member can build a view while another builds the view model and model
+          - Doesn't get in the way of designing a modular structure, although MVVM is not inherently modular
+              - Build modularity out of container views and child views
+          - View models can be used across multiple iOS platforms since they don't import UIKit
+      - Cons of MVVM
+          - Steep learning curve for RxSwift
+          - Typical implementation requires view models to collaborate
+              - Managing memory and syncing state across your app is becomes more difficult
+          - Business logic isn't reusable for different views
+              - Business logic is inside specific view models
+          - Can be hard to trace and debug
+              - UI updates happen through binding instead of method calls
+          - Can be difficult to read
+              - View models have properties for both UI state and dependencies
+              - State management is mixed with side effects and dependencies
+
+      ### Chapter 6: Architecture: Redux
+
+      - History
+          - Facebook had a bug in their desktop web app that was not always presenting the same amount of unread messages
+          - Things weren't in sync and different numbers were being reported
+          - Thus, they needed a way to guarantee consistency and Flux, a unidirectional architecture, was born
+              - Flux is a pattern, not a framework
+          - Redux was created as a Javascript implementation inspired by Flux
+          - Other languages since then have created Redux implementations
+      - Redux
