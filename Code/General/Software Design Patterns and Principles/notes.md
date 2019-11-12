@@ -1,0 +1,31 @@
+# Software Design Patterns and Principles
+
+- Software patterns offer ways to accomplish certain behaviors within a program and benefit programmer communication
+- All patterns are justified by principles
+- Important principles
+    - D.R.Y. - Don't Repeat Yourself
+        - Don't rewrite the same block(s) of coed in various places as you will have to change it in multiple places if refactoring is needed
+    - Y.A.G.N.I - You Ain't Gonna Need It
+        - Implement only what is absolutely necessary
+        - Think of the big picture and not of the smaller details
+            - Ie the UI can be coded later
+    - K.I.S.S. - Keep It Stupid Simple
+        - Reduce your code's complexity
+            - Ie if a certain design pattern overcomplicates things, don't implement it
+            - Especially holds true when doing UI design and using APIs
+    - P.O.L.A. - Principle Of Least Astonishment
+        - Do the least astonishing thing
+        - You want other developers to be able to easily understand your code when they first see it
+    - S.O.L.I.D.
+        - Single Responsibility
+            - A class should only have specific functionality for one feature or thing
+            - If it changes, it should only change for one reason
+        - Open/Closed Principle
+            - A class should be open to "extension" but closed for "modification"
+        - L. Substitution Principle
+            - Subclasses should fit anywhere that their superclass does
+        - Interface Segregation
+            - Multiple specific interfaces are better than one general purpose interface
+        - Dependency Inversion
+            - Depend on abstractions and not on concrete implementations
+                - Abstract classes and interfaces can't be instantiated
