@@ -11,7 +11,7 @@
             - Windows, Mac, and Linux can take up a lot of virtual memory - around 1 GB
     - How does Docker fix this?
 
-        <img src="./docker.png" width="400" height="400">
+        <img src="./docker.png" width="600" height="400">
 
         - As you can see, instead of using an entirely new operating system for each application, resources are shared among multiple applications
         - Having this extra layer of abstraction optimizes resource usage and reduces redundancy in operating systems

@@ -23,5 +23,6 @@ Below are my compiled insights and notes from books I've read, experiences I've 
     - How to Break Into the Tech Industry—a Guide to Job Hunting and Tech Interviews
     - Inversion of Control Containers and the Dependency Injection pattern
     - Software Design Patterns and Principles
+    - What is Docker?
   - Swift
     - Advanced iOS App Architecture
