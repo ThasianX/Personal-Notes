@@ -1,12 +1,6 @@
 # Personal Notes
 
-Below are my compiled insights and notes from books I've read, experiences I've had, and the flavors of life.
-
-
-
 "I wake up every morning, take out my hand, and just jizz out content. Content." - Gary Vaynerchuk
-
-
 
 ### Document Structure
 
