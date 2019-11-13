@@ -1,4 +1,4 @@
-# Software Design Patterns and Principles
+# [Software Design Patterns and Principles](https://www.youtube.com/watch?v=WV2Ed1QTst8)
 
 - Software patterns offer ways to accomplish certain behaviors within a program and benefit programmer communication
 - All patterns are justified by principles

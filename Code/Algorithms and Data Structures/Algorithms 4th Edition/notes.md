@@ -1,4 +1,4 @@
-# Algorithms 4th Edition
+# [Algorithms 4th Edition](https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=sr_1_1?keywords=algorithms+4th+edition&qid=1573607536&s=books&sr=1-1)
 
 ### 1.4: Analysis of Algorithms
 

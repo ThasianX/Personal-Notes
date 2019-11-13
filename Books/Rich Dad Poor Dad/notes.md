@@ -1,4 +1,4 @@
-# Rich Dad Poor Dad
+# [Rich Dad Poor Dad](https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/1612680194/ref=sxts_sxwds-bia?keywords=rich+dad+poor+dad&pd_rd_i=1612680194&pd_rd_r=5c7b71a2-5f87-47d4-8b26-8791927f3f99&pd_rd_w=1j6Nj&pd_rd_wg=OvJNo&pf_rd_p=1cb3f32a-ccfd-479b-8a13-b22f56c942c6&pf_rd_r=1WFCF50Y6BBXS9K6F56H&psc=1&qid=1573607507)
 
 ### Introduction
 
