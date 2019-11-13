@@ -24,7 +24,16 @@
     - I'll never be rich
     - Money doesn't matter
 
-> Two roads diverged in a wood, and I — I took the one less traveled by, and that has made all the difference - Robert Frost
+> Two roads diverged in a wood, and I — I took the one less traveled by, and that has made all the difference
 
 - Financial education is more powerful than money
     - With it, you can always build wealth, even if you have no money
+
+### Lesson 1: The Rich Don't work for Money
+
+- The faster you can make a decision, the more likely you'll be able to seize opportunities
+- Life is the greatest teacher. It pushes you around, calling you to action
+- Some people just let life push them. Others get angry and push back
+- Most people want everyone else but themselves to change. But it's much easier to change yourself
+
+> The poor and the middle class work for money. The rich have money work for them
