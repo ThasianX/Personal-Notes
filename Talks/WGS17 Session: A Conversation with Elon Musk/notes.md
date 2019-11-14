@@ -1,0 +1,75 @@
+# [WGS17 Session: A Conversation with Elon Musk](https://youtu.be/rCoFKUJ_8Yo)
+
+- Life is about trying to understand the right questions to ask
+    - Increasing the scope and scale of the human consciousness will better help us ask these questions
+- Certain things are necessary to ensure the future is good
+    - Long term sustainable energy
+    - Sustainable transport
+    - Space bearing civilization
+    - Multi planetary species
+        - Necessary for the survival of humankind in the future
+        - Creates a sense of adventure
+        - Makes people excited about the future
+        - Consider two futures: one where we are confined to Earth until something terrible happens or another one where we are out there on many planets and going beyond the solar system
+        - There needs to reasons to get up in the morning
+        - Life just can't be about solving problems
+        - There's got to be things that people find inspiring and make life worth living
+- Hopes for the future
+    - We are out there on Mars, Jupiter, Saturn
+    - We are traveling frequently throughout the solar system
+    - Preparing for missions to nearby star systems
+    - All of this is possible within 50 years
+- Why is Deep Artificial intelligence dangerous?
+    - Having an AI that is much smarter than the smartest person on Earth just isn't safe
+    - It will basically be like an alien
+- Aliens
+    - If there are aliens, they are probably already observing us and we're just not smart enough to realize it
+    - Pocket calculations
+        - Any advanced alien civilization that was at interested in populating the galaxy  even without exceeding the speed of light could populate the entire galaxy within 10 to 20 million years
+        - This is nothing in the grand scheme of things
+- Solution to urban congestion
+    - A network of tunnels under cities
+        - Tunnels that go many levels deep
+        - You can always go deeper than you can go up
+        - For example, the deepest tunnels are deeper than the tallest buildings
+    - The challenge
+        - How do you figure out how to build tunnels quickly, with low cost, and safely?
+- What's the next disturbance in technology?
+    - Most near term
+        - Autonomous cars
+            - It's going to slowly put drivers and people out of jobs
+            - We need to figure out roles for these people to do
+    - Eventually we're going to need some kind of universal basic income
+        - There will be fewer and fewer jobs that a robot cannot do better
+        - The output of goods and services will be high
+        - Thus, there will be an abundance and goods and items will become cheap
+    - The real question is then how do people have meaning?
+        - Many people derive meaning from their employment
+        - If there's not a need for your labor, what's your meaning?
+        - How do we ensure the future is going to be a future that we want and will still like?
+    - Having some sort of merger with biological intelligence and machine intelligence
+        - The concept
+            - Tertiary layer - limbic system
+            - Cortex layer - brain
+            - Digital layer
+                - If someone dies, their digital ghost is still around - their social media posts and emails - will still be around
+        - The bandwidth is important
+            - The speed of the connection between your brain and the digital extension of yourself
+            - You could input commands to your phone using your brain
+        - High bandwidth interface to the brain will help achieve symbiosis between human and machine intelligence
+            - Could solve the control and usefulness problem
+- How do you come up with ideas?
+    - Think about what technology solution is necessary in order to achieve that particular goal and then try to make as much progress in that direction as much as possible
+- How do you choose your team?
+    - Questions
+        - Tell me the story of your life and the decisions you made along the way and  why you made them?
+        - Tell me about some of the most difficult problems you've worked on and how you solved them?
+            - The people who really solve the problem, they know exactly how they solved the problem. They know the little details
+            - The people that pretended to solve the problem can go about 1 level and then they get stuck
+- How to make progress in things?
+    - Best analytical framework for thinking would be thinking process around physics
+        - Not just the equations but the way of thinking in physics that allows physicists to understand things that are counterintuitive
+    - Always take the position that you are some degree wrong and your goal is to be less wrong over time
+    - One of the biggest mistakes we make is wishful thinking
+        - You want something to be true if it isn't true
+        - You ignore the real truth because of what you want to be true

@@ -28,3 +28,5 @@ Below are my compiled insights and notes from books I've read, experiences I've 
     - Advanced iOS App Architecture
     - iOS Architecture Patterns
     - Throttle vs Debounce in RxSwift
+- Talks
+  - WGS17 Session: A Conversation with Elon Musk
