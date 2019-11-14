@@ -32,8 +32,17 @@
 ### Lesson 1: The Rich Don't work for Money
 
 - The faster you can make a decision, the more likely you'll be able to seize opportunities
-- Life is the greatest teacher. It pushes you around, calling you to action
 - Some people just let life push them. Others get angry and push back
 - Most people want everyone else but themselves to change. But it's much easier to change yourself
 
 > The poor and the middle class work for money. The rich have money work for them
+
+- True learning takes energy, passion, and a burning desire
+- People's lives are controlled by money: the fear of the lack of money drives them to work hard to earny money but once they get the paycheck, greed or desire causes them to spend the money they just earned. This cycle perpetuates
+- Be an observer, not a reactor to your emotions
+    - When a person says, "I need to find a job", it's most likely an emotion doing the thinking. The fear of not having money generates that thought
+    - Instead of waking up and going to work because of the fear of not paying your bills, ask yourself "Is working harder at this the best solution to this problem?"
+    - When emotions go up, intelligence goes down
+- A job is really just a short term solution to a long term problem
+- We're all employees ultimately. We just work at different levels
+- What intensifies fear and desire is ignorance. Ignorance stems from your perception of money
