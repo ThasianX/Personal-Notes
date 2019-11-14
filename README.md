@@ -14,6 +14,7 @@
   - Algorithms and Data Structures
     - Algorithms 4th Edition
   - General
+    - A New Introduction to Jira & Agile Project Management
     - How to Break Into the Tech Industry—a Guide to Job Hunting and Tech Interviews
     - Inversion of Control Containers and the Dependency Injection pattern
     - Software Design Patterns and Principles

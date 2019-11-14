@@ -1,0 +1,76 @@
+# [A New Introduction to Jira & Agile Project Management](https://www.youtube.com/watch?v=TsG3OWTDAFY)
+
+- Jira projects
+    - The 'Project' is the highest level container
+    - A single issue can only be in one Jira project at a time
+    - All of your team's work should be put into 1 Jira project
+- Types of Agile
+    - Kanban
+        - Best for teams that are working on bugs or issues where most issues have an ASAP schedule
+        - Focus on rapid assignment
+        - Working in the right order, not so much on estimating completion dates
+        - Typical flow
+            - Collect all the work that needs to be done
+            - Put the work in the right order
+            - Assign and complete the work as fast as possible
+    - Scrum
+        - Best for teams that are working on new features with a tight schedule for finishing their work
+        - Manage their way towards this target by breaking their work into iterative batches called sprints
+            - Usual sprints last 2 weeks
+        - When new work is discovered, the existing in progress work is left as it is and new work is added to the next sprint
+        - Typical flow
+            - Collect all the work that needs to be done
+            - Put the work in the right order
+            - Define checkpoints for completion of batches of work aka sprints
+            - Then reprioritize at each checkpoint
+- Agile tasks
+    - Breaking work into fragments helps ensure that ownership of every task is clear and teams can reprioritize often
+    - Make sure tasks are granular enough to let you reprioritize as often as you discover new things
+    - Good guidelines
+        - A single agile task should take at least a few horus
+        - A single agile task should not take more than 3 days
+        - As you begin to master Agile, try making the maximum amount of time for a task 1 day
+            - This way, in every stand up meeting, you will always have the ability to say you finished the thing you set out to finish
+- Issue Types
+    - Stories
+        - Usually used by PMs to describe planned work for a specific feature of a product
+    - Tasks
+        - Usually used by any team member to describe other planned, non-story work
+    - Bugs
+        - Calls out unplanned work
+    - Epic
+        - Collection of stories and tasks arranged together to achieve some specific outcome
+- Issue fields
+    - Story points
+        - Useful for estimating work during Scrum planning
+    - Labels
+        - Are just tags
+        - Users can make their own labels on the fly
+        - Helps differentiate between different teams
+    - Components
+        - Are also tags
+        - New components must be created by an administrator in Jira's settings section
+        - Helps differentiate between modules within a product
+- Scrum backlog
+    - New Jira issues are put into the backlog
+    - You can prioritize your team's work and arrange it into sprints - 2 week delivery batches
+- Agile sprints
+    - Has a start and end date
+    - Often 2 weeks long
+    - While active, you shouldn't add new work to the active sprint
+- Epics
+    - Avoid unfinishable epics like 'Maintenance' and 'Refactoring'
+- Story points
+    - Relative measure of complexity
+    - Helps overcome the inherent uncertainty of estimating while still creating a useful quantifier for the items in the backlog
+    - Use estimation points of: 1, 2, 3, 5, 8, 13
+        - Fibonacci numbers are often used because when tasks are small, your ability ot imagine exactly what you'll do is fairly accurate
+        - But when tasks get bigger, your ability to estimate gets worse and worse. And at this scale, the difference between a 11, 12, 13, or 14 is pretty much irrelevant
+        - Fibonacci numbers map nicely to this error in estimation
+    - Helps with measuring team velocity
+    - Guidelines for new teams
+        - 1 point: 2-3 hours for a task
+        - 13 points: 3 days for a task
+- Jira work flows
+    - All tasks in the project should go through all the steps(columns) of the workflow
+    - Users should be able to see all the columns of the workflow, so keep the number of steps to 7 or less
