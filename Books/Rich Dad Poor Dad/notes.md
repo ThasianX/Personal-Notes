@@ -10,7 +10,7 @@
     - Learn to manage risk
     - My house is a liability
     - Financial self-reliance
-    - Write strong business and financial plans so I can create jobs
+    - Write strong business and financial plans so you can create jobs
     - There is a difference between being poor and being broke. Broke is temporary. Poor is eternal
     - Money is power
 - Poor people think
@@ -72,3 +72,18 @@
         - Loss of additional capital which you could have invested instead of paying for home maintenance
         - Loss of education which you could've gained investment experience to increase your assets
     - If you want a bigger house, think how you can get assets that will generate the money necessary to pay for the house
+- The middle class is always stuck in a self defeating loop because their salary is their primary source of income - when salaries increase, so do taxes
+
+### Lesson 3: Mind your own business
+
+- One of the main reasons net worth isn't accurate is because once you begin selling your assets, they any gained are taxed
+- Start acquiring real assets
+    - Businesses that do not require any presence
+    - Stocks
+    - Bonds
+    - Income generating real estate
+    - Notes(IOUs)
+    - Royalties from intellectual property such as music, scripts, and patents
+    - Anything else that has value, produces income or appreciates, and has a ready market
+- An important distinction is that the rich buy luxuries last while the poor and middle class buy luxuries first
+    - The rich wait for their cash flows to support the spending of their luxuries
