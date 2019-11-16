@@ -74,7 +74,7 @@
     - If you want a bigger house, think how you can get assets that will generate the money necessary to pay for the house
 - The middle class is always stuck in a self defeating loop because their salary is their primary source of income - when salaries increase, so do taxes
 
-### Lesson 3: Mind your own business
+### Lesson 3: Mind Your Own Business
 
 - One of the main reasons net worth isn't accurate is because once you begin selling your assets, they any gained are taxed
 - Start acquiring real assets
@@ -87,3 +87,39 @@
     - Anything else that has value, produces income or appreciates, and has a ready market
 - An important distinction is that the rich buy luxuries last while the poor and middle class buy luxuries first
     - The rich wait for their cash flows to support the spending of their luxuries
+
+### Lesson 4: The History of Taxes and The Power of Corporations
+
+- Governments use the tax laws to provide incentives to business owners and investors to create jobs and housing. As a result, this reduces taxes for the rich. In return, the government has to drive tax revenue from the middle class and the poor.
+- A corporation is merely a legal document that creates a legal body without a soul
+    - The income tax rate of a corporation is much less than that of an individual
+    - Certain expenses can also be paid by a corporation using pre-tax dollars
+- The rich search for ways to minimize their tax burden
+    - Hire smart attorneys and accountants
+    - Persuade politicians to change laws or create legal loopholes
+    - For example, Section 1031 of the Internal Revenue Code allows a seller to delay paying taxes on a piece of real estate that is sold for a capital gain through an exchange for a more expensive piece of real estate
+
+> If you work for money, you give the power to your employer. If money works for you, you keep the power and control it
+
+- Financial IQ is made up of
+    - Accounting
+        - Financial literacy
+            - The ability to read and understand financial statements which allow you to identify the strengths and weakness of any business
+    - Investing
+        - The science of "money making money"
+        - Involves creative strategies and formulas
+    - Understanding markets
+        - Science of supply and demand
+        - Knowing the technical aspects of the market which are emotion driven as well as the fundamental or economic aspects of an investment
+    - The law
+        - Corporation
+            - Tax advantages
+                - Pays expenses before paying taxes
+                - Your vacations can be board meetings in Hawaii
+                - Car payments, insurance, repairs, and health club membership can all be company expenses
+                - Most restaurant meals can be partial expenses
+                - All done legally with pre-tax dollars
+            - Protection from lawsuits
+                - When someone sues a wealthy individual, they are often met with lawyers and find that the wealthy person owns nothing, but controls everything
+- Read
+    - Garret Sutton's books on corporations have some good insight on the power of personal corporations
