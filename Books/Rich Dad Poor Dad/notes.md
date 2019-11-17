@@ -123,3 +123,10 @@
                 - When someone sues a wealthy individual, they are often met with lawyers and find that the wealthy person owns nothing, but controls everything
 - Read
     - Garret Sutton's books on corporations have some good insight on the power of personal corporations
+
+### Lesson 5: The Rich Invent Money
+
+- Often in the real world, it's not the smart who get ahead but the bold
+- Financial literacy matters in a world where information is wealth
+    - Gives you the power of having more options by asking yourself what else you can do in your current position to improve upon your current financial status
+- Our most powerful asset is our mind
