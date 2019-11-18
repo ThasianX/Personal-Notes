@@ -154,3 +154,26 @@
 - There is always risk so you must learn to manage it than avoid it
 
 ### Lesson 6: Work to Learn — Don't Work for Money
+
+- The popular opinion nowadays is to specialize in one thing but it's better to know a little about a lot and learn through osmosis
+- Most people work hard to get a secure job, focusing on the pay and benefits in the short term
+- What they need to do is seek work that will teach them the skills they'll need to be successful in the long term
+    - Robert did this through first attending a school for international trade
+    - Then he left when he knew he learned enough and found a job at Xerox, which has one of the best sales training programs in America
+    - Then he left Xerox when he became one of the best in sales there to start his own company
+
+> Job is an acronym for 'Just Over Broke'
+
+- A management theory that does have a degree of truth is that "Workers work hard enough to not be fired, and owners pay just enough so that workers won't quit"
+- Just as the rich are able to afford better education, they will also be able to keep themselves alive longer while those who have little wealth will die
+- Take a second job to teach yourself a second skill
+    - Join a network marketing company to learn sales skills
+- The reason so many talented people are poor is because they focus too much on building a better product when they should be focusing on learn about business systems
+    - The more specialized you become, the more trapped and dependent on that specialty
+- The main management skills needed for success are
+    - Management of cash flow
+    - Management of systems
+    - Management of people
+- The rich give first, then receive
+
+### Lesson 7: Overcoming Obstacles
