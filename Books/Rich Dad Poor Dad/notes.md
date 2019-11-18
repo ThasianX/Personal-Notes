@@ -130,3 +130,27 @@
 - Financial literacy matters in a world where information is wealth
     - Gives you the power of having more options by asking yourself what else you can do in your current position to improve upon your current financial status
 - Our most powerful asset is our mind
+- It is much better to buy assets with your money rather than save your money
+    - When you save money, you're taxed on the interest
+    - Asset money that is created isn't taxed
+- There will be market booms and crashes
+    - The person that has the greatest financial intelligence will be the one who gains from situations like these
+- The greater your financial intelligence, the easier it is to tell if a deal is good
+- The more you develop your financial intelligence, the more opportunities you will be offered
+
+> Great opportunities are not seen with your eyes. They are seen with your mind
+
+- Have fun while investing. Most people never win because they are too afraid of losing
+- There are 2 kinds of investors
+    - Those who buy  a packaged investment from a retail company
+    - Those who create investments by assembling the deal themselves
+        - Skills necessary
+            - Finding opportunities that everyone else missed
+            - Raising money
+                - Those who say they can't raise money because of the bank or not having money are all wrong
+                - You need to find ways to raise money and find loopholes in the system to buy certain things even if you don't have the money
+            - Organize smart people
+                - When you need advice, choose your advisor wisely
+- There is always risk so you must learn to manage it than avoid it
+
+### Lesson 6: Work to Learn — Don't Work for Money
