@@ -177,3 +177,59 @@
 - The rich give first, then receive
 
 ### Lesson 7: Overcoming Obstacles
+
+- It's not having fear that is the problem. It's how you handle fear and losing
+    - If you hate risk and worry, start early. If you start young, it's easier to be rich
+    - For most people, the reason they don't win financially is because the pain of losing money far outweighs the joy of being rich
+- Failure inspires winners. Failure defeats losers
+    - After Pearl Harbor, America didn't wallow in defeat; America turned "Remember pearl harbor" into a nationwide rallying chant and America soon emerged as a world power
+- All of us have doubts created in our own minds. It takes great courage to not let rumors and negative chatter affect your inner mind
+
+> Cynics criticize. Winners analyze
+
+- Most people stay busy to avoid something they don't want to face
+    - The cure to laziness is to have a little greed.
+    - Without a little greed, the desire to have something better, you can't progress
+
+    > Do what you feel in your heart to be right—for you'll be criticized anyway. You'll be damned if you do, and damned if you don't
+
+- Our lives are more a reflection of our habits than our education
+    - Rich people have a habit of paying themselves first, then the government, even if they don't have enough money
+    - The pressure to pay taxes and other creditors that comes from doing that forces them to seek other forms of income. This motivation is what makes them financially stronger, mentally and fiscally
+- When you are ignorant on a subject, find yourself a mentor or book on that subject
+    - It is what you don't know that loses you money so start learning
+
+### Lesson 8: Getting Started
+
+> There is gold everywhere. Most people are not trained to see it
+
+- Find a reason greater than reality: the power of spirit
+    - A reason is a combinations of "wants" and "don't wants"
+    - Deep seated emotional wants
+        - I want to be free to travel the world and live in the lifestyle I love
+        - I want to be young when I do this
+        - I want to be simply free
+        - I want to control over my time and my life
+        - I want money to work for me
+- Make daily choices: the power of choice
+    - Our spending habits reflect who we are
+        - Spend less. Invest more
+    - Rich people choose to be rich every day. Poor people choose to be poor every day
+    - Invest first in education
+        - If you learn something new, you are required to make mistakes in order to fully understand what you have learned
+- Choose friends carefully: the power of association
+    - If you get rich, you will notice that your friends who have no money will never come ask you how you got rich. But they will ask you about either a loan or job
+    - Be true to yourself and be willing to not go with the crowd
+        - Wise investors buy an investment before it's popular. Then they patiently wait
+    - Insider trading
+        - You want to have rich friends because they can provide you with the information about when and where money will be made
+        - You want to know when the next boom happens. You want to get in quick and get out before it goes bust
+- Master a formula and then learn a new one: the power of learning quickly
+    - In today's ever changing world, it's how fast you learn, not how much you know
+- Pay yourself first: the power of self discipline
+    - Each month, allocate money to your asset column before paying your monthly expenses, even if it means going into a bit of debt
+        - But of course make sure that those bills that are due are small ones
+    - To do so successfully, keep these 2 rules in mind
+        - Keep your expenses low. Build up assets. Then buy your luxury
+        - When you come up short, let the pressure build up. Don't draw your savings to pay for your debt but instead call on your financial genius to think of ways to make extra money to pay off your debt
+- Pay your brokers well: the power of good advice
