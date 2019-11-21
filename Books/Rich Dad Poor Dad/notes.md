@@ -209,7 +209,7 @@
         - I want to be free to travel the world and live in the lifestyle I love
         - I want to be young when I do this
         - I want to be simply free
-        - I want to control over my time and my life
+        - I want to have control over my time and my life
         - I want money to work for me
 - Make daily choices: the power of choice
     - Our spending habits reflect who we are
@@ -233,3 +233,22 @@
         - Keep your expenses low. Build up assets. Then buy your luxury
         - When you come up short, let the pressure build up. Don't draw your savings to pay for your debt but instead call on your financial genius to think of ways to make extra money to pay off your debt
 - Pay your brokers well: the power of good advice
+    - Brokers are your eyes and ears to the market
+    - To find any good professional, you should look to see how much property or stocks they personally own and what percentage they pay in taxes. Also find a broker who has your best interests at heart
+        - The real skill here to is to manage and reward people who are smarter than you in some technical area
+- Be an Indian giver: the power of getting something for nothing
+    - Indian giver originates from Indian culture when the first European settlers came to America
+        - Indians noticed that if a settler was cold, they would give them a blanket. But when they were warmed up, the Indians asked for the blanket back. The settlers interpreted this as a gift and got offended when they asked for it back
+    - You want to be an Indian giver in investing
+        - Ask "How fast do I get my money back?" and "What will I get for free once I get my money back?"
+            - For example, in real estate, you can buy a piece of land of tens of thousands and rent it for a couple years. After that time span, that piece of land will essentially be generating you cash for free
+- Use assets to buy luxuries: the power of focus
+    - Don't buy luxuries on credit
+    - Have a habit of focusing on the asset column and train yourself to earn the assets to buy whatever luxury you want
+- Choose heroes: the power of myth
+
+    > When it comes to investing, too many people make it sound hard. Instead, find heroes who make it look easy
+
+    - People like Warren Buffet, David Stockman, Donald Trump, etc
+- Teach and you shall receive: the power of giving
+    - The process of thinking about what you want and how you can help give that to someone else will often come back to you better multiplied
